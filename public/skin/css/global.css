@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+/* 
+@layer base {
+    html {
+        font-family: 'Gothic A1';
+    }
+} */
+@layer components{
+    :root{
+        --play: running;
+        --direction: normal;
+        --duration: 40s;
+        --delay: 0s;
+        --iteration-count: infinite;
+    }
+    .marquee-container{
+        overflow-x: hidden !important;
+        display: flex !important;
+        flex-direction: row !important;
+        position: relative;
+        /* width: 100%; */
+    }
+    .marquee{
+        flex: 0 0 auto;
+        min-width: 100%;
+        z-index: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        animation: scroll var(--duration) linear var(--delay) var(--iteration-count);
+        animation-play-state: var(--play);
+        animation-delay: var(--delay);
+        animation-direction: var(--direction);
+    }
+    @keyframes scroll {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-100%);
+        }
+    }
+
+    .scrolling-words-container {
+        display: flex;
+        align-items: center;
+    }
+    .scrolling-words-box {
+        height: 2rem;
+        margin: auto;
+        overflow: hidden;
+    }
+    .scrolling-words-box ul {
+        /* margin: 0 0.625rem; */
+        padding: 0;
+        animation: scrollUp 10s infinite;
+        animation-delay: 3s;
+    }
+    .scrolling-words-box ul li {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 2rem;
+        list-style: none;
+        font-size: 1rem;
+        /* background-color: antiquewhite; */
+    }
+    @keyframes scrollUp {
+        0%, 20% {
+            transform: translateY(-2rem);
+        }
+        20%, 40% {
+            transform: translateY(-4rem);
+        }
+        40%, 60% {
+            transform: translateY(-6rem);
+        }
+        60%, 80% {
+            transform: translateY(-8rem);
+        }
+        80%, 100% {
+            transform: translateY(-10rem);
+        }
+    }
+
+    /* summary:first-of-type {
+        list-style-type: none;
+    }
+     
+    summary:after {
+      border-radius: 5px;
+      content: "+";
+      color: #000;
+      float: left;
+      font-size: 40px;
+      font-weight: bold;
+      margin: -7px 12px 0 0;
+      padding: 0;
+      text-align: center;
+      width: 20px;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    details[open] summary:after {
+      content: "-";
+       font-size: 40px;
+    } */
+}
