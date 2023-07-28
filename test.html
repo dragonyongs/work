@@ -50,10 +50,10 @@
     </div>
     <script>
         $(function() {
-    function animateWords() {
-        $(".words p").animate({marginTop: '-100%'}, 1400, 'linear', function() {
-            $(this).css('marginTop', 0).appendTo('.words');
-        });
+            function animateWords() {
+                $(".words p").animate({marginTop: '-100%'}, 1400, 'linear', function() {
+                    $(this).css('marginTop', 0).appendTo('.words');
+                });
         }
         setInterval(animateWords, 1400);
     });

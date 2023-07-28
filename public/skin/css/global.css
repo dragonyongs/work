@@ -100,7 +100,12 @@
         user-select: none;
         cursor: pointer;
     }
-    
+    @media screen and (max-width: 1024px) {
+        .accordion .accordion_tab,
+        .accordion .accordion_item{
+            font-size: 16px;
+        }
+    }
     .accordion .accordion_tab .accordion_arrow{
         position: absolute;
         top: 50%;
@@ -117,6 +122,17 @@
     
     .accordion.active{
         height: 140px;
+    }
+    @media screen and (max-width: 1024px) {
+        .accordion:nth-child(4){
+            height: 86px;
+        }
+        .accordion.active{
+            height: 152px;
+        }
+        .accordion:nth-child(4).active{
+            height: 200px;
+        }
     }
     .accordion .accordion_tab.active .accordion_arrow{
         transform: translateY(-50%) rotate(180deg);
@@ -141,6 +157,7 @@
         overflow: hidden;
     } */
     .words span{
+        width: 100%;
         font-weight: 700;
         font-size: 22px;
     
