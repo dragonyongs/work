@@ -205,6 +205,15 @@
 
             resetClasses();
             moveLi();
+            
+            //Modal Popup
+            $("#open-contact-modal").on("click", function () {
+                $("#modal").removeClass("hidden");
+            });
+
+            $("#close-contact-modal").on("click", function () {
+                $("#modal").addClass("hidden");
+            });
         });
 
         $(function(){
