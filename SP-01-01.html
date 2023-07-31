@@ -1,0 +1,217 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./public/skin/css/global.css">
+    <link rel="stylesheet" type="text/css" href="./public/skin/css/font.css">
+    <link rel="stylesheet" type="text/css" href="./public/skin/css/aos.css">
+    <link rel="stylesheet" type="text/css" href="./public/skin/css/jquerysctipttop.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./public/skin/js/jquery-3.7.0.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    borderRadius: {
+                        '4xl': '4rem',
+                    },
+                    colors: {
+                        base: '#2196F3',
+                    },
+                    boxShadow: {
+                        base: '0 0 10px',
+                        card: '0 0 10px #00000029',
+                        modal: '0 0 25px #63636375',
+                        sub: '0px 0px 25px #63636375',
+                    },
+                    backgroundImage: {
+                        'hero-section-01': "url('./public/skin/images/bg_section_01.png')",
+                        'hero-section-01-m': "url('./public/skin/images/bg_section_01_m.png')",
+                        'hero-section-02': "url('https://images.unsplash.com/photo-1519219788971-8d9797e0928e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1444&q=80')",
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <header class="fixed z-20 py-[24px] lg:py-7 w-full bg-white">
+        <div class="px-[24px] lg:px-0 lg:mx-auto lg:w-[1100px]">
+            <nav class="relative z-50 flex justify-between">
+                <div class="flex items-center">
+                    <a href="/#" aria-label="Home">
+                        <img src="./public/skin/images/header_logo.png" class="w-[169px] h-[35px]" alt="환급달인 로고" />
+                    </a>
+                </div>
+                <div class="flex items-center">
+                    <a href="/" class="group inline-flex items-center justify-center rounded-full py-2 px-4 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-blue-400 text-white hover:text-slate-100 hover:bg-blue-500 active:bg-blue-800 active:text-blue-100 focus-visible:outline-blue-600">
+                        <span class="inline-block h-[19px] text-base text-white font-normal ">무료 환급 조회하기</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 환급 유형 선택! -->
+    <section class="lg:mb-[117px]">
+        <div class="pt-24 relative container mx-auto max-w-screen-xl px-4">
+            <div class="hidden lg:block mb-[89px] text-center">
+                <h2 class="font-bold text-5xl mb-7">환급 유형 선택!</h2>
+            </div>
+            <div class="refundType lg:w-[560px] mx-auto mt-12 lg:mt-0">
+                <div class="relative h-[229px] mb-16 pt-12 pl-12 bg-white hover:bg-[#4C9EFB] hover:text-white shadow-sub rounded-[20px] cursor-pointer">
+                    <h3 class="font-medium text-2xl">법인사업자</h3>
+                    <span class="block absolute bottom-8 right-8 w-[113px] h-[95px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="113.49" height="94.61" viewBox="0 0 113.49 94.61">
+                            <g id="refundType-company" transform="translate(0 0)">
+                                <path id="path_659" data-name="path 659" d="M111.99,85.69H1.5a1.5,1.5,0,0,1,0-3H111.99a1.5,1.5,0,0,1,0,3Z" fill="#13134b"/>
+                                <path id="path_660" data-name="path 660" d="M26.93,94.28H12.2a1.5,1.5,0,0,1,0-3H26.93a1.5,1.5,0,0,1,0,3Z" fill="#13134b"/>
+                                <path id="path_661" data-name="path 661" d="M100.59,94.28H54.65a1.5,1.5,0,0,1,0-3h45.94a1.5,1.5,0,0,1,0,3Z" fill="#13134b"/>
+                                <path id="path_662" data-name="path 662" d="M69.07,85.69H5.94V16.26a7.14,7.14,0,0,1,5.61-7L52.53.17a7.2,7.2,0,0,1,5.06.74L66.9,6.14a7.169,7.169,0,0,1,3.67,6.25V31.75h-3V12.39a4.171,4.171,0,0,0-2.13-3.63L56.13,3.53a4.177,4.177,0,0,0-2.94-.43L12.2,12.19a4.2,4.2,0,0,0-3.26,4.08V82.7H69.07v3Z" fill="#13134b"/>
+                                <path id="path_663" data-name="path 663" d="M15.67,19.94a1.5,1.5,0,0,1-.11-3l31.82-2.43a1.5,1.5,0,1,1,.23,2.99L15.79,19.93h-.12Z" fill="#008cff"/>
+                                <path id="path_664" data-name="path 664" d="M15.67,33.98a1.5,1.5,0,0,1-.11-3l31.82-2.43a1.5,1.5,0,1,1,.23,2.99L15.79,33.97h-.12Z" fill="#008cff"/>
+                                <path id="path_665" data-name="path 665" d="M15.67,48.02a1.5,1.5,0,0,1-.11-3l31.82-2.43a1.5,1.5,0,1,1,.23,2.99L15.79,48.01h-.12Z" fill="#008cff"/>
+                                <path id="path_666" data-name="path 666" d="M15.67,62.06a1.5,1.5,0,0,1-.11-3l31.82-2.43a1.5,1.5,0,0,1,.23,2.99L15.79,62.05h-.12Z" fill="#008cff"/>
+                                <path id="path_667" data-name="path 667" d="M15.67,76.1a1.5,1.5,0,0,1-.11-3l31.82-2.43a1.5,1.5,0,1,1,.23,2.99L15.79,76.09h-.12Z" fill="#008cff"/>
+                                <rect id="rect_12252" data-name="rect 12252" width="3" height="83.03" transform="translate(53.47 1.16)" fill="#13134b"/>
+                                <path id="path_668" data-name="path 668" d="M106.77,85.69H60.51V37.86a7.13,7.13,0,0,1,5.62-7l26.81-5.95a7.143,7.143,0,0,1,5.06.75l5.11,2.87a7.172,7.172,0,0,1,3.66,6.25Zm-43.26-3h40.26V34.78a4.187,4.187,0,0,0-2.13-3.64l-5.11-2.87a4.132,4.132,0,0,0-2.94-.43L66.78,33.79a4.153,4.153,0,0,0-3.27,4.07Z" fill="#13134b"/>
+                                <rect id="rect_12253" data-name="rect 12253" width="3" height="58.28" transform="translate(93.88 25.91)" fill="#13134b"/>
+                                <circle id="circle_100" data-name="circle 100" cx="1.83" cy="1.83" r="1.83" transform="translate(34.96 90.95)" fill="#008cff"/>
+                                <circle id="circle_101" data-name="circle 101" cx="1.83" cy="1.83" r="1.83" transform="translate(43.27 90.95)" fill="#008cff"/>
+                                <circle id="circle_102" data-name="circle 102" cx="1.83" cy="1.83" r="1.83" transform="translate(68.58 39.01)" fill="#008cff"/>
+                                <circle id="circle_103" data-name="circle 103" cx="1.83" cy="1.83" r="1.83" transform="translate(75.79 37.59)" fill="#008cff"/>
+                                <circle id="circle_104" data-name="circle 104" cx="1.83" cy="1.83" r="1.83" transform="translate(83.39 35.75)" fill="#008cff"/>
+                                <circle id="circle_105" data-name="circle 105" cx="1.83" cy="1.83" r="1.83" transform="translate(68.58 47.88)" fill="#008cff"/>
+                                <circle id="circle_106" data-name="circle 106" cx="1.83" cy="1.83" r="1.83" transform="translate(75.79 46.46)" fill="#008cff"/>
+                                <circle id="circle_107" data-name="circle 107" cx="1.83" cy="1.83" r="1.83" transform="translate(83.39 44.63)" fill="#008cff"/>
+                                <circle id="circle_108" data-name="circle 108" cx="1.83" cy="1.83" r="1.83" transform="translate(68.58 56.76)" fill="#008cff"/>
+                                <circle id="circle_109" data-name="circle 109" cx="1.83" cy="1.83" r="1.83" transform="translate(75.79 55.33)" fill="#008cff"/>
+                                <circle id="circle_110" data-name="circle 110" cx="1.83" cy="1.83" r="1.83" transform="translate(83.39 53.5)" fill="#008cff"/>
+                                <circle id="circle_111" data-name="circle 111" cx="1.83" cy="1.83" r="1.83" transform="translate(68.58 65.63)" fill="#008cff"/>
+                                <circle id="circle_112" data-name="circle 112" cx="1.83" cy="1.83" r="1.83" transform="translate(75.79 64.21)" fill="#008cff"/>
+                                <circle id="circle_113" data-name="circle 113" cx="1.83" cy="1.83" r="1.83" transform="translate(83.39 62.37)" fill="#008cff"/>
+                                <circle id="circle_114" data-name="circle 114" cx="1.83" cy="1.83" r="1.83" transform="translate(68.58 74.51)" fill="#008cff"/>
+                                <circle id="circle_115" data-name="circle 115" cx="1.83" cy="1.83" r="1.83" transform="translate(75.79 73.08)" fill="#008cff"/>
+                                <circle id="circle_116" data-name="circle 116" cx="1.83" cy="1.83" r="1.83" transform="translate(83.39 71.25)" fill="#008cff"/>
+                            </g>
+                        </svg>
+                    </span>
+                </div>
+                <div class="relative h-[229px] mb-16 pt-12 pl-12 bg-white hover:bg-[#4C9EFB] hover:text-white shadow-sub rounded-[20px] cursor-pointer">
+                    <h3 class="font-medium text-2xl">개인사업자</h3>
+                    <span class="block absolute bottom-8 right-8 w-[113px] h-[95px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="113.49" height="97.83" viewBox="0 0 113.49 97.83">
+                            <g id="refundType-personal" transform="translate(0 0)">
+                                <path id="path_650" data-name="path 650" d="M111.99,88.91H1.5a1.5,1.5,0,0,1,0-3H111.99a1.5,1.5,0,0,1,0,3Z" fill="#13134b"/>
+                                <path id="path_651" data-name="path 651" d="M26.93,97.5H12.2a1.5,1.5,0,0,1,0-3H26.93a1.5,1.5,0,0,1,0,3Z" fill="#13134b"/>
+                                <path id="path_652" data-name="path 652" d="M100.59,97.5H54.65a1.5,1.5,0,0,1,0-3h45.94a1.5,1.5,0,0,1,0,3Z" fill="#13134b"/>
+                                <circle id="circle_90" data-name="circle 90" cx="1.83" cy="1.83" r="1.83" transform="translate(34.96 94.17)" fill="#008cff"/>
+                                <circle id="circle_91" data-name="circle 91" cx="1.83" cy="1.83" r="1.83" transform="translate(43.27 94.17)" fill="#008cff"/>
+                                <circle id="circle_92" data-name="circle 92" cx="1.83" cy="1.83" r="1.83" transform="translate(17.73 24.81)" fill="#008cff"/>
+                                <circle id="circle_93" data-name="circle 93" cx="1.83" cy="1.83" r="1.83" transform="translate(24.76 24.81)" fill="#008cff"/>
+                                <circle id="circle_94" data-name="circle 94" cx="1.83" cy="1.83" r="1.83" transform="translate(17.73 31.56)" fill="#008cff"/>
+                                <circle id="circle_95" data-name="circle 95" cx="1.83" cy="1.83" r="1.83" transform="translate(24.76 31.56)" fill="#008cff"/>
+                                <circle id="circle_96" data-name="circle 96" cx="1.83" cy="1.83" r="1.83" transform="translate(85.09 11.57)" fill="#008cff"/>
+                                <circle id="circle_97" data-name="circle 97" cx="1.83" cy="1.83" r="1.83" transform="translate(71.98 11.57)" fill="#008cff"/>
+                                <circle id="circle_98" data-name="circle 98" cx="1.83" cy="1.83" r="1.83" transform="translate(85.09 0)" fill="#008cff"/>
+                                <circle id="circle_99" data-name="circle 99" cx="1.83" cy="1.83" r="1.83" transform="translate(71.98 0)" fill="#008cff"/>
+                                <path id="path_653" data-name="path 653" d="M54.28,87.41H45.1a1.5,1.5,0,0,1-1.5-1.5V52.78a1.5,1.5,0,0,1,3,0V84.41h6.18V69.35a1.5,1.5,0,0,1,3,0V85.91A1.5,1.5,0,0,1,54.28,87.41Z" fill="#13134b"/>
+                                <path id="path_654" data-name="path 654" d="M63.46,87.41H54.28a1.5,1.5,0,0,1-1.5-1.5V69.35a1.5,1.5,0,0,1,3,0V84.41h6.18V52.78a1.5,1.5,0,1,1,3,0V85.91A1.5,1.5,0,0,1,63.46,87.41Z" fill="#13134b"/>
+                                <path id="path_655" data-name="path 655" d="M70.6,66.8a1.5,1.5,0,0,1-1.5-1.5V53.73c0-4.77-3.29-8.66-7.33-8.66H46.28c-4.04,0-7.33,3.88-7.33,8.66V65.05a1.5,1.5,0,0,1-3,0V53.73c0-6.43,4.63-11.66,10.33-11.66H61.77c5.7,0,10.33,5.23,10.33,11.66V65.3A1.5,1.5,0,0,1,70.6,66.8Z" fill="#13134b"/>
+                                <path id="path_656" data-name="path 656" d="M67.03,71.62a5.077,5.077,0,0,1-5.07-5.07V53.73a1.5,1.5,0,1,1,3,0V66.55a2.07,2.07,0,0,0,4.14,0V53.73a1.5,1.5,0,0,1,3,0V66.55A5.077,5.077,0,0,1,67.03,71.62Z" fill="#13134b"/>
+                                <path id="path_657" data-name="path 657" d="M41.28,71.62a5.335,5.335,0,0,1-5.33-5.33V53.72a1.5,1.5,0,0,1,3,0V66.29a2.33,2.33,0,1,0,4.66,0V53.72a1.5,1.5,0,0,1,3,0V66.29A5.335,5.335,0,0,1,41.28,71.62Z" fill="#13134b"/>
+                                <path id="path_658" data-name="path 658" d="M54.03,36.72A12.61,12.61,0,1,1,66.64,24.11,12.628,12.628,0,0,1,54.03,36.72Zm0-22.23a9.61,9.61,0,1,0,9.61,9.61,9.62,9.62,0,0,0-9.61-9.61Z" fill="#13134b"/>
+                            </g>
+                        </svg>                          
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 영역 -->
+    <footer class="bg-slate-50">
+        <div class="relative flex lg:justify-between flex-col lg:flex-row lg:mx-auto w-full lg:w-[1100px] px-6 lg:px-0 py-6 lg:py-16">
+            <div class="z-20 absolute top-16 right-6 lg:top-6 lg:right-4">
+                <nav>
+                    <ul class="flex justify-center items-center gap-2">
+                        <li>
+                            <a href="#" class="text-sm font-light">이용약관</a>
+                        </li>
+                        <li class="">|</li>
+                        <li>
+                            <a href="#" class="text-sm font-bold">개인정보 처리방침</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="my-8">
+                <img src="./public/skin/images/footer_logo.png" class="w-[169px] h-[35px]" alt="환급달인 로고" />
+            </div>
+            
+            <div class="mt-2">
+                <p class="font-light text-sm leading-7">상호명 : 정원세무회계<span class="px-2">|</span>대표자 : 박훈<span class="px-2">|</span>사업자등록번호 : 875-43-00852<span class="px-2">|</span>주소 : 서울시 강남구 강남대로62길 3 (역삼동) 한진빌딩 2층</p>
+                <p class="font-light text-sm leading-7">문의전화 02-522-5262 (평일 09:00~18:00) | 주말 · 공휴일 휴무</p>
+                <p class="font-light text-sm leading-7">Copyright © Jungwon tax accounting ALL RIGHT RESERVED</p>
+            </div>
+        </div>
+    </footer>
+    <!-- 로컬 파일 작업 예정 -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-syntax@4.4.0/dist/jquery.syntax.min.js"></script>
+    <!-- // 로컬 파일 작업 예정 -->
+    <script type="text/javascript" charset="utf-8" src="./public/skin/js/jquery.textroll.js"></script>
+
+    <script>
+        AOS.init();
+        //토글 형식으로 추후 변경  
+        $(".accordion_tab").click(function(){
+            $(".accordion_tab").each(function(){
+                $(this).parent().removeClass("active");
+                $(this).removeClass("active text-blue-500");
+            });
+            $(this).parent().addClass("active");
+            $(this).addClass("active text-blue-500");
+        });
+
+        $(document).ready(function() {
+            let currentIndex = 0;
+            let $icon = $('ul.process > li > .iconMove');
+            let $number = $('ul.process > li > .numberChange');
+
+            function resetClasses() {
+                $icon.removeClass('-top-4').addClass('top-0');
+                $number.removeClass('bg-blue-700 text-white').addClass('bg-sky-200');
+            }
+
+            function moveLi() {
+                setTimeout(function() {
+                    resetClasses();
+                    $icon.eq(currentIndex).removeClass('top-0').addClass('-top-4');
+                    $number.eq(currentIndex).removeClass('bg-sky-200').addClass('bg-blue-700 text-white');
+                    currentIndex = (currentIndex + 1) % $icon.length;
+                    moveLi();
+                }, 2500);
+            }
+
+            resetClasses();
+            moveLi();
+        });
+
+        $(function(){
+            $(".words").textroll({
+                easing: 'easeInOutCirc',
+                speed: 1000,
+                delay: 600
+            });
+            $.syntax({
+                root: 'https://cdn.jsdelivr.net/npm/jquery-syntax@4.4.0/dist/'
+            });
+        });
+    </script>
+</body>
+</html>

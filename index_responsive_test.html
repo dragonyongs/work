@@ -17,11 +17,12 @@
                         '4xl': '4rem',
                     },
                     colors: {
-                        clifford: '#da373d',
+                        base: '#2196F3',
                     },
                     boxShadow: {
                         base: '0 0 10px',
                         card: '0 0 10px #00000029',
+                        modal: '0 0 25px #63636375',
                     },
                     backgroundImage: {
                         'hero-section-01': "url('./public/skin/images/bg_section_01.png')",
@@ -339,9 +340,9 @@
     </section>
 
     <!-- 06. 메세지 배너 영역 -->
-    <section class="relative overflow-hidden bg-slate-900">
+    <section class="relative overflow-hidden bg-black">
         <div class="container lg:mx-auto lg:w-[1100px] h-[680px] flex justify-center lg:items-center">
-            <h2 class="px-6 lg:px-0 mt-20 lg:mt-0 font-medium text-3xl lg:text-[3rem] text-center leading-snug text-white">
+            <h2 class="px-6 lg:px-0 mt-20 lg:mt-0 font- text-3xl lg:text-[3rem] text-center leading-snug text-white">
                 환급 후에도 고객님과 함께합니다.<br>
                 세무전문가에게 고객님의 고민을 들려주세요.
             </h2>
@@ -357,16 +358,16 @@
 
 
     <!-- Main modal -->
-    <div class="hidden fixed top-0 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full  justify-center items-center flex">
-        <div class="relative w-full max-w-2xl max-h-full shadow-xl">
+    <div class="fixed top-0 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full  justify-center items-center flex">
+        <div class="relative w-full max-w-sm max-h-full">
             <!-- Modal content -->
-            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <div class="relative bg-white shadow-modal rounded-[20px]">
                 <!-- Modal header -->
-                <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
-                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                <div class="flex items-start justify-between px-8 pt-12 pb-6 rounded-t">
+                    <h3 class="text-xl font-medium text-gray-900">
                         환급달인에 문의하기
                     </h3>
-                    <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="defaultModal">
+                    <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center data-modal-hide="defaultModal">
                         <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
                         </svg>
@@ -374,18 +375,42 @@
                     </button>
                 </div>
                 <!-- Modal body -->
-                <div class="p-6 space-y-6">
+                <!-- <div class="p-6 space-y-6">
                     <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
                         With less than a month to go before the European Union enacts new consumer privacy laws for its citizens, companies around the world are updating their terms of service agreements to comply.
                     </p>
                     <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
                         The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to ensure a common set of data rights in the European Union. It requires organizations to notify users as soon as possible of high-risk data breaches that could personally affect them.
                     </p>
-                </div>
-                <!-- Modal footer -->
-                <div class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
-                    <button data-modal-hide="defaultModal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">I accept</button>
-                    <button data-modal-hide="defaultModal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Decline</button>
+                </div> -->
+                <div class="px-6 pb-12 lg:px-8">
+                    <form class="space-y-6" action="#">
+                        <div>
+                            <label for="name" class="block mb-1 text-md font-normal text-gray-900">성함</label>
+                            <input type="text" name="name" id="name" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 placeholder-[#C9C7C7]" placeholder="이름을 입력해 주세요." required>
+                        </div>
+                        <div>
+                            <label for="phone" class="block mb-1 text-md font-normal text-gray-900">연락처</label>
+                            <input type="tel" name="phone" id="phone" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 placeholder-[#C9C7C7]" placeholder=" - 없이 입력해주세요." required>
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-1 text-md font-normal text-gray-900">문의내용</label>
+                            <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 placeholder-[#C9C7C7]" placeholder="문의하실 내용을 남겨주세요." required></textarea>
+                        </div>
+                        <div class="pb-8">
+                            <div class="flex items-center mb-4">
+                                <input id="terms-checkbox" type="checkbox" value="" class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-200 rounded-3xl focus:ring-blue-500 focus:ring-2" required>
+                                <label for="terms-checkbox" class="ml-2 text-sm font-normal text-gray-500 cursor-pointer">(필수) 이용약관 동의</label>
+                            </div>
+                            <div class="flex items-center mb-4">
+                                <input id="information-checkbox" type="checkbox" value="" class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-200 rounded-3xl focus:ring-blue-500 focus:ring-2" required>
+                                <label for="information-checkbox" class="ml-2 text-sm font-normal text-gray-500 cursor-pointer">(필수) 개인정보 수집 및 이용 동의</label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="w-full text-white bg-base focus:ring-4 focus:outline-none focus:ring-blue-300 font-light rounded-full text-lg px-5 py-2.5 text-center">등록</button>
+
+                    </form>
                 </div>
             </div>
         </div>

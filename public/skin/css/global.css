@@ -217,4 +217,7 @@
         opacity: 0.49;
     }
 
+    .refundType div:hover span svg g > :is(path,circle,rect){
+        fill: #fff !important;
+    }
 }
