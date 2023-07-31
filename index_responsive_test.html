@@ -26,7 +26,7 @@
                     backgroundImage: {
                         'hero-section-01': "url('./public/skin/images/bg_section_01.png')",
                         'hero-section-01-m': "url('./public/skin/images/bg_section_01_m.png')",
-                        'hero-section-02': "url('./public/skin/images/bg_section_02.png')",
+                        'hero-section-02': "url('https://images.unsplash.com/photo-1519219788971-8d9797e0928e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1444&q=80')",
                     },
                 }
             }
@@ -51,7 +51,7 @@
         </div>
     </header>
 
-    <!-- 메인 상단 영역 -->
+    <!-- 01. 메인 배너 영역 -->
     <section>
         <div class="pt-24 relative container lg:mx-auto lg:w-[1100px] px-4">
             <div class="container lg:mx-auto flex lg:px-5 lg:py-24 lg:flex-row flex-col items-center mb-28 lg:mb-0">
@@ -85,7 +85,7 @@
         </div>
     </section>
 
-    <!-- 두번째 영역 -->
+    <!-- 02. 카드 영역 -->
     <section class="py-20 lg:pt-[115px] lg:pb-[98px] bg-[#F8F9FA]">
         <div class="relative container mx-auto w-full lg:w-[1100px] px-8 lg:px-4">
             <div class="mb-12 lg:mb-[89px] text-center aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
@@ -129,7 +129,7 @@
         </div>
     </section>
 
-    <!-- 세번째 영역 -->
+    <!-- 03. 프로세스 영역 -->
     <section class="py-20">
         <div class="relative container mx-auto max-w-screen-xl px-4" data-aos="fade-up" data-aos-duration="1200">
             <div class="mb-[89px] text-center">
@@ -191,7 +191,7 @@
         </div>
     </section>
 
-    <!-- 네번째 영역 -->
+    <!-- 04. 무료 환급 조회하기 배너 영역 -->
     <section class="bg-hero-section-01-m lg:bg-hero-section-01 bg-cover px-5 py-20 lg:py-24">
         <div class="container lg:mx-auto w-full h-[809px] lg:w-[1100px] lg:h-[860px] flex lg:flex-row flex-col items-center">
             <div class="w-full lg:w-2/3 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
@@ -208,7 +208,7 @@
         </div>
     </section>
 
-    <!-- 다섯번째 영역 -->
+    <!-- 05. 자주하는 질문: FAQ 영역 -->
     <section>
         <div class="container px-5 py-24 mx-auto lg:w-[1100px]">
             <div class="mb-12 text-center">
@@ -338,14 +338,15 @@
         </div>
     </section>
 
-    <!-- 여섯번째 영역 -->
-    <section class="bg-hero-section-02 bg-cover">
+    <!-- 06. 메세지 배너 영역 -->
+    <section class="relative overflow-hidden bg-slate-900">
         <div class="container lg:mx-auto lg:w-[1100px] h-[680px] flex justify-center lg:items-center">
             <h2 class="px-6 lg:px-0 mt-20 lg:mt-0 font-medium text-3xl lg:text-[3rem] text-center leading-snug text-white">
                 환급 후에도 고객님과 함께합니다.<br>
                 세무전문가에게 고객님의 고민을 들려주세요.
             </h2>
         </div>
+        <div class="absolute top-0 left-0 z-0 w-full h-screen bg-hero-section-02 bg-cover bg-center"></div>
     </section>
     
     <div class="btn_quick z-30 fixed right-10 bottom-32 lg:bottom-64 border-sky-100 w-[60px] h-[60px] flex items-center justify-center transition-all rounded-xl shadow-base shadow-[#217CF3]">
@@ -429,7 +430,7 @@
 
     <script>
         AOS.init();
-
+        //토글 형식으로 추후 변경  
         $(".accordion_tab").click(function(){
             $(".accordion_tab").each(function(){
                 $(this).parent().removeClass("active");

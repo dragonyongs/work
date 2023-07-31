@@ -213,4 +213,8 @@
         background: transparent linear-gradient(227deg, #30D1FC 0%, #4C9EFB 100%) 0% 0% no-repeat padding-box;
     }
 
+    .bg-hero-section-02{
+        opacity: 0.49;
+    }
+
 }
