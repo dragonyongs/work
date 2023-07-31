@@ -374,12 +374,12 @@
         <div class="absolute top-0 left-0 z-0 w-full h-screen bg-hero-section-02 bg-cover bg-center"></div>
     </section>
     
+    <!-- Quick Menu -->
     <div class="btn_quick z-30 fixed right-10 bottom-32 lg:bottom-64 border-sky-100 w-[60px] h-[60px] flex items-center justify-center transition-all rounded-xl shadow-base shadow-[#217CF3]">
         <a id="open-contact-modal" href="#" class="rounded-full bg-white w-10 h-10">
             <!-- <img src="./public/skin/images/quick_pop.png" alt="w-full"> -->
         </a>
     </div>
-
 
     <!-- Main modal -->
     <div id="modal" class="hidden fixed top-0 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full  justify-center items-center flex">
@@ -387,7 +387,7 @@
             <!-- Modal content -->
             <div class="relative bg-white shadow-modal rounded-[20px]">
                 <!-- Modal header -->
-                <div class="flex items-start justify-between px-8 pt-12 pb-6 rounded-t">
+                <div class="flex items-start justify-between px-8 pt-12 pb-6">
                     <h3 class="text-xl font-medium text-gray-900">
                         환급달인에 문의하기
                     </h3>
@@ -419,8 +419,8 @@
                                 <label for="terms-checkbox" class="ml-2 text-sm font-normal text-gray-500 cursor-pointer">(필수) 이용약관 동의</label>
                             </div>
                             <div class="flex items-center mb-4">
-                                <input id="information-checkbox" type="checkbox" value="" class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-200 rounded-3xl focus:ring-blue-500 focus:ring-2" required>
-                                <label for="information-checkbox" class="ml-2 text-sm font-normal text-gray-500 cursor-pointer">(필수) 개인정보 수집 및 이용 동의</label>
+                                <input id="privacyPolicy-checkbox" type="checkbox" value="" class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-200 rounded-3xl focus:ring-blue-500 focus:ring-2" required>
+                                <label for="privacyPolicy-checkbox" class="ml-2 text-sm font-normal text-gray-500 cursor-pointer">(필수) 개인정보 수집 및 이용 동의</label>
                             </div>
                         </div>
 
@@ -431,7 +431,6 @@
             </div>
         </div>
     </div>
-
 
     <!-- 푸터 영역 -->
     <footer class="bg-slate-50">
