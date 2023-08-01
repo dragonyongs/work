@@ -151,7 +151,7 @@
     </section>
 
     <!-- Quick Menu -->
-    <div class="btn_quick z-30 fixed right-10 xl:right-28 bottom-28 xl:bottom-28 border-sky-100 w-[60px] h-[60px] flex items-center justify-center transition-all rounded-xl shadow-base shadow-[#217CF3]">
+    <div class="btn_quick z-30 fixed right-10 xl:right-28 bottom-16 xl:bottom-28 border-sky-100 w-[60px] h-[60px] flex items-center justify-center transition-all rounded-xl shadow-base shadow-[#217CF3]">
         <button type="button" class="open-modal" data-modal-id="modal-inquiry">
             <img src="./public/skin/images/icon_quick_say.png" alt="w-full">
         </button>
@@ -382,9 +382,9 @@
                     }
                 } else {
                     if ((scrollHeight - scrollPosition) <= 1) {
-                        $('.btn_quick').addClass('bottom-72').removeClass('bottom-28');
+                        $('.btn_quick').addClass('bottom-72').removeClass('bottom-16');
                     } else {
-                        $('.btn_quick').addClass('bottom-28').removeClass('bottom-72');
+                        $('.btn_quick').addClass('bottom-16').removeClass('bottom-72');
                     }
                 }
             });

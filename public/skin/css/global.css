@@ -42,7 +42,7 @@
     }
 
     .accordion{
-        height: 65px;
+        height: 60px;
         overflow: hidden;
         transition: all .3s ease-in-out;
     }
@@ -105,6 +105,9 @@
         }
         .accordion .accordion_content{
             padding: 0 22px 18px;
+        }
+        .accordion:nth-child(2).active{
+            height: 176px;
         }
         .accordion:nth-child(4).active{
             height: 226px;

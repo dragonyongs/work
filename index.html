@@ -80,8 +80,8 @@
                     </a>
                 </div>
                 <div class="flex items-center">
-                    <a href="./SP-01-01.html" class="group inline-flex items-center justify-center rounded-full py-2 px-4 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-blue-400 text-white hover:text-slate-100 hover:bg-blue-500 active:bg-blue-800 active:text-blue-100 focus-visible:outline-blue-600">
-                        <span class="inline-block text-base font-normal ">무료 환급 조회하기</span>
+                    <a href="./SP-01-01.html" class="inline-flex items-center h-[35px] justify-center rounded-full py-3 px-4 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-blue-400 text-white hover:text-slate-100 hover:bg-blue-500 active:bg-blue-800 active:text-blue-100 focus-visible:outline-blue-600">
+                        <span class="inline-block text-base font-normal leading-none pt-1">무료 환급 조회하기</span>
                     </a>
                 </div>
             </nav>
@@ -109,10 +109,10 @@
                             <span class="text-center xl:text-left">대구 제조업(법인)<i>|</i><em>환급액 11.2억원</em></span>
                         </div>
                     </div>
-                    <div data-aos="fade-up" data-aos-delay="1500" data-aos-duration="1200">
-                        <button type="button" onclick="location='./SP-01-01.html'" class="flex items-center mt-auto font-normal text-white bg-[#2196F3] border-0 py-3 px-6 w-full focus:outline-none rounded-full text-xl tracking-wider hover:shadow-base hover:shadow-[#217CF3] hover:transition-all">
-                            무료환급 조회하기
-                        </button>
+                    <div class="flex items-center" data-aos="fade-up" data-aos-delay="1500" data-aos-duration="1200">
+                        <a href="./SP-01-01.html" class="flex items-center mt-auto font-normal leading-none text-white bg-[#2196F3] border-0 py-3 px-6 w-full focus:outline-none rounded-full text-xl tracking-wider hover:shadow-base hover:shadow-[#217CF3] hover:transition-all">
+                            <span class="inline-block text-base font-normal leading-none pt-1">무료 환급 조회하기</span>
+                        </a>
                     </div>
                 </div>
                 <div class="md:w-1/2 xl:max-w-xl w-5/6 text-center" data-aos="fade-up" data-aos-delay="900" data-aos-duration="1200">
@@ -329,7 +329,7 @@
                         </div>
                     </div>
                     <div class="accordion_content">
-                        <div class="accordion_itex flex gap-3 xl:gap-6">
+                        <div class="accordion_item flex gap-3 xl:gap-6">
                             <span class="font-bold">A.</span>
                             <p class="xl:max-w-3xl">네, 환급달인으로 세금 환급을 진행하여도 담당 세무사가 변경되는 것은 아닙니다. 세금 환급은 환급 전문 세무사에게 받는 것이 더 유리합니다.</p>
                         </div>
@@ -391,7 +391,7 @@
     </section>
     
     <!-- Quick Menu -->
-    <div class="btn_quick z-30 fixed right-10 xl:right-28 bottom-28 xl:bottom-28 border-sky-100 w-[60px] h-[60px] flex items-center justify-center transition-all rounded-xl shadow-base shadow-[#217CF3]">
+    <div class="btn_quick z-30 fixed right-10 xl:right-28 bottom-16 xl:bottom-28 border-sky-100 w-[60px] h-[60px] flex items-center justify-center transition-all rounded-xl shadow-base shadow-[#217CF3]">
         <button type="button" class="open-modal" data-modal-id="modal-inquiry">
             <img src="./public/skin/images/icon_quick_say.png" alt="w-full">
         </button>
@@ -592,9 +592,9 @@
                     }
                 } else {
                     if ((scrollHeight - scrollPosition) <= 1) {
-                        $('.btn_quick').addClass('bottom-72').removeClass('bottom-28');
+                        $('.btn_quick').addClass('bottom-72').removeClass('bottom-16');
                     } else {
-                        $('.btn_quick').addClass('bottom-28').removeClass('bottom-72');
+                        $('.btn_quick').addClass('bottom-16').removeClass('bottom-72');
                     }
                 }
             });
