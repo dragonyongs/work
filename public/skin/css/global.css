@@ -225,4 +225,16 @@
         overflow: hidden;
         height: 100%;
     }
+
+    .swing {
+        animation: swing ease-in-out .3s infinite alternate;
+        animation-delay: 1s;
+        -webkit-animation: swing ease-in-out .3s infinite alternate;
+        -webkit-animation-delay: 1s;
+    }
+
+    @keyframes swing {
+        0% { transform: rotate(3deg); }
+        100% { transform: rotate(-3deg); }
+    }
 }
