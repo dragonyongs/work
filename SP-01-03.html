@@ -41,6 +41,12 @@
     <link rel="stylesheet" type="text/css" href="./public/skin/css/font.css">
     <link rel="stylesheet" type="text/css" href="./public/skin/css/aos.css">
     <link rel="stylesheet" type="text/css" href="./public/skin/css/jquerysctipttop.css">
+    <!--
+        * https://tailwindcss.com/docs/guides/laravel
+        * Tailwind CSS installation
+        * npm install -D tailwindcss postcss autoprefixer
+        * npx tailwindcss init -p
+    -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./public/skin/js/jquery-3.7.0.min.js"></script>
     <script>
@@ -90,26 +96,26 @@
 
     <!-- 환급받을 사업장의 대표자 정보 -->
     <section>
-        <div class="lg:mb-[117px] pt-36 lg:pt-32 relative container mx-auto max-w-screen-xl px-4">
+        <div class="xl:mb-[117px] pt-36 lg:pt-32 relative container mx-auto max-w-screen-xl px-4">
             <div class="mb-6 text-center">
                 <h2 class="relative inline-block font-bold text-3xl lg:text-5xl mb-7 leading-tight">
                     환급받을 사업장의 대표자 정보
                     <span class="-z-10 absolute -bottom-2 -left-3 block w-[106%] h-7 bg-[#BCE1FF]"></span>
                 </h2>
             </div>
-            <div class="max-w-3xl mx-auto px-6 pb-12 lg:px-8">
+            <div class="max-w-3xl mx-auto px-6 pb-16 lg:px-8">
                 <form class="space-y-6" action="#">
                     <div>
                         <label for="name" class="block mb-2 text-xl font-medium text-gray-900">이름</label>
-                        <input type="text" name="name" id="name" class="h-14 pl-7 bg-[#F5F6F9]  text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 placeholder-[#9A9A9A]" placeholder="이름을 입력해 주세요." required>
+                        <input type="text" name="name" id="name" autocomplete="off" class="h-14 pl-7 bg-[#F5F6F9]  text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 placeholder-[#9A9A9A]" placeholder="이름을 입력해 주세요." required>
                     </div>
                     <div>
                         <label for="phone" class="block mb-2 text-xl font-medium text-gray-900">휴대폰 번호</label>
-                        <input type="tel" name="phone" id="phone" class="h-14 pl-7 bg-[#F5F6F9]  text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 placeholder-[#9A9A9A]" placeholder=" - 없이 입력해주세요." minlength="10" maxlength="11" required>
+                        <input type="tel" name="phone" id="phone" autocomplete="off" class="h-14 pl-7 bg-[#F5F6F9]  text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 placeholder-[#9A9A9A]" placeholder=" - 없이 입력해주세요." minlength="10" maxlength="11" required>
                     </div>
                     <div class="pb-14">
                         <label for="birthday" class="block mb-2 text-xl font-medium text-gray-900">생년월일</label>
-                        <input type="text" name="birthday" id="birthday" class="h-14 pl-7 bg-[#F5F6F9]  text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 placeholder-[#9A9A9A]" placeholder="19840326 (8자리를 입력해 주세요.)" minlength="8" maxlength="8" required>
+                        <input type="text" name="birthday" id="birthday" autocomplete="off" class="h-14 pl-7 bg-[#F5F6F9]  text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 placeholder-[#9A9A9A]" placeholder="19840326 (8자리를 입력해 주세요.)" minlength="8" maxlength="8" required>
                     </div>
                     <div>
                         <label for="agree" class="block text-xl font-medium text-gray-900">서비스 이용동의</label>
@@ -123,29 +129,29 @@
                             <hr>
                             <div class="relative flex items-center my-4">
                                 <input id="terms-checkbox" type="checkbox" value="" class="float-left mr-[6px] mt-[0.15rem] h-7 w-7 appearance-none rounded-full border border-gray-400 before:content-[''] checked:border-[#2196F3] bg-white checked:bg-white checked:before:opacity-[0.16] checked:after:absolute checked:after:mt-[0.2rem] checked:after:ml-[0.5rem] checked:after:block checked:after:h-[1rem] checked:after:w-2.5 checked:after:rotate-45  checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-[#2196F3] checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer" required>
-                                <label for="terms-checkbox" class="ml-2 pt-1 text-lg font-normal text-gray-400 cursor-pointer">(필수) 이용약관 동의</label>
+                                <label for="terms-checkbox" class="max-w-[200px] sm:max-w-xl xl:max-w-2xl ml-2 pt-1 text-lg font-normal text-gray-400 cursor-pointer">(필수) 이용약관 동의</label>
                                 <button type="button" class="open-modal absolute top-2 right-0 underline text-gray-400" data-modal-id="modal-terms">보기</ㅠ>
                             </div>
                             <div class="relative flex items-center mt-4">
                                 <input id="privacyPolicy-checkbox" type="checkbox" value="" class="float-left mr-[6px] mt-[0.15rem] h-7 w-7 appearance-none rounded-full border border-gray-400 before:content-[''] checked:border-[#2196F3] bg-white checked:bg-white checked:before:opacity-[0.16] checked:after:absolute checked:after:mt-[0.2rem] checked:after:ml-[0.5rem] checked:after:block checked:after:h-[1rem] checked:after:w-2.5 checked:after:rotate-45  checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-[#2196F3] checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer" required>
-                                <label for="privacyPolicy-checkbox" class="ml-2 pt-1 text-lg font-normal text-gray-400 cursor-pointer">(필수) 개인정보 수집 및 이용 동의</label>
+                                <label for="privacyPolicy-checkbox" class="max-w-[200px] sm:max-w-xl xl:max-w-2xl ml-2 pt-1 text-lg font-normal text-gray-400 cursor-pointer">(필수) 개인정보 수집 및 이용 동의</label>
                                 <button type="button" class="open-modal absolute top-2 right-0 underline text-gray-400" data-modal-id="modal-privacy">보기</button>
                             </div>
                             <div class="relative flex items-center mt-4">
                                 <input id="marketing-checkbox" type="checkbox" value="" class="float-left mr-[6px] mt-[0.15rem] h-7 w-7 appearance-none rounded-full border border-gray-400 before:content-[''] checked:border-[#2196F3] bg-white checked:bg-white checked:before:opacity-[0.16] checked:after:absolute checked:after:mt-[0.2rem] checked:after:ml-[0.5rem] checked:after:block checked:after:h-[1rem] checked:after:w-2.5 checked:after:rotate-45  checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-[#2196F3] checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer" required>
-                                <label for="marketing-checkbox" class="ml-2 pt-1 text-lg font-normal text-gray-400 cursor-pointer">(선택) 마케팅 활용 동의 - (주)스타리치 어드바이져</label>
+                                <label for="marketing-checkbox" class="max-w-[200px] sm:max-w-xl xl:max-w-2xl ml-2 pt-1 text-lg font-normal text-gray-400 cursor-pointer">(선택) 마케팅 활용 동의 - (주)스타리치 어드바이져</label>
                                 <button type="button" class="open-modal absolute top-2 right-0 underline text-gray-400" data-modal-id="modal-marketing">보기</button>
                             </div>
                         </div>
                     </div>
-                    <button type="submit" class="block mx-auto w-3/4 lg:w-[337px] text-white bg-base hover:shadow-base hover:shadow-[#217CF3] focus:ring-4 focus:outline-none focus:ring-blue-300 font-light rounded-full text-lg px-5 py-4 lg:py-2.5 text-center">환급액 조회하기</button>
+                    <button type="submit" class="block mx-auto w-3/4 lg:w-[337px] text-white bg-primary hover:shadow-base hover:shadow-[#217CF3] focus:ring-4 focus:outline-none focus:ring-blue-300 font-light rounded-full text-lg px-5 py-4 lg:py-2.5 text-center">환급액 조회하기</button>
                 </form>
             </div>
         </div>
     </section>
 
     <!-- Quick Menu -->
-    <div class="btn_quick z-30 fixed right-10 bottom-32 lg:bottom-64 border-sky-100 w-[60px] h-[60px] flex items-center justify-center transition-all rounded-xl shadow-base shadow-[#217CF3]">
+    <div class="btn_quick z-30 fixed right-10 xl:right-64 bottom-28 xl:bottom-28 border-sky-100 w-[60px] h-[60px] flex items-center justify-center transition-all rounded-xl shadow-base shadow-[#217CF3]">
         <button type="button" class="open-modal rounded-full bg-white w-10 h-10" data-modal-id="modal-inquiry">
         </button>
     </div>
@@ -192,7 +198,7 @@
                                 <label for="privacyPolicy-checkbox" class="ml-2 text-sm font-normal text-gray-500 cursor-pointer">(필수) 개인정보 수집 및 이용 동의</label>
                             </div>
                         </div>
-                        <button type="submit" class="close-modal w-full text-white bg-base hover:shadow-base hover:shadow-[#217CF3] focus:ring-4 focus:outline-none focus:ring-blue-300 font-light rounded-full text-lg px-5 py-2.5 text-center">등록</button>
+                        <button type="submit" class="close-modal w-full text-white bg-primary hover:shadow-base hover:shadow-[#217CF3] focus:ring-4 focus:outline-none focus:ring-blue-300 font-light rounded-full text-lg px-5 py-2.5 text-center">등록</button>
                     </form>
                 </div>
             </div>
@@ -273,7 +279,7 @@
                 </div>
                 <!-- Modal footer -->
                 <div class="flex items-center p-6 rounded-b dark:border-gray-600">
-                    <button type="button" class="close-modal block w-1/4 mx-auto text-white bg-base hover:shadow-base hover:shadow-[#217CF3] focus:ring-4 focus:outline-none focus:ring-blue-300 font-light rounded-full text-lg px-5 py-2.5 text-center">확인</button>
+                    <button type="button" class="close-modal block w-1/4 mx-auto text-white bg-primary hover:shadow-base hover:shadow-[#217CF3] focus:ring-4 focus:outline-none focus:ring-blue-300 font-light rounded-full text-lg px-5 py-2.5 text-center">확인</button>
                 </div>
             </div>
         </div>
@@ -322,7 +328,7 @@
                         <li>
                             <button type="button" class="open-modal text-sm font-light hover:font-bold" data-modal-id="modal-terms">이용약관</button>
                         </li>
-                        <li class="">|</li>
+                        <li>|</li>
                         <li>
                             <button type="button" class="open-modal text-sm font-light hover:font-bold" data-modal-id="modal-privacy">개인정보 처리방침</button>
                         </li>
@@ -331,7 +337,7 @@
             </div>
 
             <div class="my-8">
-                <img src="./public/skin/images/footer_logo.png" class="w-[169px] h-[35px]" alt="환급달인 로고" />
+                <img src="./public/skin/images/footer_logo.png" class="w-[126px] xl:w-[169px] h-[26px] xl:h-[35px]" alt="환급달인 로고" />
             </div>
             
             <div class="mt-2">
@@ -353,11 +359,9 @@
         
         $(".accordion_tab").click(function() {
             if ($(this).hasClass("active")) {
-                // 이미 열린 요소를 클릭하면 닫힘 상태로 변경
                 $(this).parent().removeClass("active");
                 $(this).removeClass("active text-blue-500");
             } else {
-                // 현재 클릭 된 요소만 활성화
                 $(this).parent().addClass("active");
                 $(this).addClass("active text-blue-500");
             }
@@ -369,11 +373,18 @@
             $(window).on('scroll', function () {
                 let scrollHeight = $(document).height();
                 let scrollPosition = $(window).height() + $(window).scrollTop();
-                
-                if ((scrollHeight - scrollPosition) <= 1) {
-                $('.btn_quick').addClass('bottom-48').removeClass('bottom-32');
+                if($(window).width() > 1024){
+                    if ((scrollHeight - scrollPosition) <= 1) {
+                        $('.btn_quick').addClass('xl:bottom-64').removeClass('xl:bottom-28');
+                    } else {
+                        $('.btn_quick').addClass('xl:bottom-28').removeClass('xl:bottom-64');
+                    }
                 } else {
-                $('.btn_quick').addClass('bottom-32').removeClass('bottom-48');
+                    if ((scrollHeight - scrollPosition) <= 1) {
+                        $('.btn_quick').addClass('bottom-72').removeClass('bottom-28');
+                    } else {
+                        $('.btn_quick').addClass('bottom-28').removeClass('bottom-72');
+                    }
                 }
             });
 

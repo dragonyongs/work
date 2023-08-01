@@ -132,19 +132,19 @@
                 <h2 class="font-medium xl:font-bold text-4xl xl:text-5xl">환급달인에서 지금 바로 조회해야 하는 이유!</h2>
             </div>
             <div class="flex flex-wrap lg:flex-col xl:flex-row justify-center items-start mx-auto md:max-w-md xl:max-w-none">
-                <div class="px-4 md:px-0 md:mx-auto xl:mr-10 mb-7 xl:mb-0 aos-init aos-animate" data-aos="fade-up" data-aos-delay="900">
-                    <div class="w-[300px] md:mx-auto h-full px-14 rounded-[20px] bg-white hover:bg-[#FFEFB4] flex flex-col justify-center items-center shadow-card transition-all">
+                <div class="px-4 md:px-0 md:mx-auto mb-7 xl:mb-0 aos-init aos-animate" data-aos="fade-up" data-aos-delay="900">
+                    <div class="w-[300px] md:mx-auto h-full px-12 rounded-[20px] bg-white hover:bg-[#FFEFB4] flex flex-col justify-center items-center shadow-card transition-all">
                         <div class="w-[174px] h-[174px] rounded-full bg-[#ECECFE] flex justify-center items-center mt-10">
                             <img src="./public/skin/images/illust_tax.png" alt="tax">
                         </div>
                         <div class="text-center my-10">
                             <h3 class="text-xl font-bold mb-8 tracking-tight">경정청구는 당연한 권리</h3>
-                            <p class="text-base tracking-normal">국세 기본법 제45조의 25년간 과·오납한 세금을 돌려받는 정당한 제도입니다.</p>
+                            <p class="text-base tracking-tight">국세 기본법 제45조의 25년간 과·오납한 세금을 돌려받는 정당한 제도입니다.</p>
                         </div>
                     </div>
                 </div>
-                <div class="px-4 md:px-0 md:mx-auto xl:mr-10 mb-7 xl:mb-0 aos-init aos-animate" data-aos="fade-up" data-aos-delay="1200">
-                    <div class="w-[300px] mx-auto h-full px-14 rounded-[20px] bg-white hover:bg-[#FFEFB4] flex flex-col justify-center items-center shadow-card transition-all">
+                <div class="px-4 md:px-0 md:mx-auto mb-7 xl:mb-0 aos-init aos-animate" data-aos="fade-up" data-aos-delay="1200">
+                    <div class="w-[300px] mx-auto h-full px-12 rounded-[20px] bg-white hover:bg-[#FFEFB4] flex flex-col justify-center items-center shadow-card transition-all">
                         <div class="w-[174px] h-[174px] rounded-full bg-[#FFF3DC] flex justify-center items-center mt-10">
                             <img src="./public/skin/images/illust_hourglass.png" alt="">
                         </div>
@@ -155,13 +155,13 @@
                     </div>
                 </div>
                 <div class="md:mx-auto aos-init aos-animate" data-aos="fade-up" data-aos-delay="1500">
-                    <div class="w-[300px] mx-auto h-full px-14 rounded-[20px] bg-white hover:bg-[#FFEFB4] flex flex-col justify-center items-center shadow-card transition-all">
+                    <div class="w-[300px] mx-auto h-full px-12 rounded-[20px] bg-white hover:bg-[#FFEFB4] flex flex-col justify-center items-center shadow-card transition-all">
                         <div class="w-[174px] h-[174px] rounded-full bg-[#E9F6FE] flex justify-center items-center mt-10">
                             <img src="./public/skin/images/illust_scales.png" alt="">
                         </div>
                         <div class="text-center my-10">
                             <h3 class="text-xl font-bold mb-8 tracking-tight">수시로 변경되는 세법</h3>
-                            <p class="text-base tracking-normal">수시로 변경되는 세법을 매번 변경 적용하여 개인이  확인하는 것은 매우 어렵습니다.</p>
+                            <p class="text-base tracking-tight">수시로 변경되는 세법을 매번 변경 적용하여 개인이  확인하는 것은 매우 어렵습니다.</p>
                         </div>
                     </div>
                 </div>
@@ -381,7 +381,7 @@
     <!-- 06. 메세지 배너 영역 -->
     <section class="relative overflow-hidden bg-black">
         <div class="container xl:mx-auto xl:w-[1100px] h-[680px] flex justify-center xl:items-center">
-            <h2 class="px-6 xl:px-0 mt-20 xl:mt-0 font- text-3xl xl:text-[3rem] text-center leading-snug text-white" data-aos="fade-up" data-aos-delay="800">
+            <h2 class="px-6 xl:px-0 mt-20 xl:mt-0 font-medium text-3xl xl:text-[3rem] text-center leading-snug text-white" data-aos="fade-up" data-aos-delay="800">
                 환급 후에도 고객님과 함께합니다.<br>
                 세무전문가에게 고객님의 고민을 들려주세요.
             </h2>
@@ -545,7 +545,7 @@
             </div>
 
             <div class="my-8">
-                <img src="./public/skin/images/footer_logo.png" class="w-[169px] h-[35px]" alt="환급달인 로고" />
+                <img src="./public/skin/images/footer_logo.png" class="w-[126px] xl:w-[169px] h-[26px] xl:h-[35px]" alt="환급달인 로고" />
             </div>
             
             <div class="mt-2">
@@ -583,11 +583,18 @@
             $(window).on('scroll', function () {
                 let scrollHeight = $(document).height();
                 let scrollPosition = $(window).height() + $(window).scrollTop();
-                
-                if ((scrollHeight - scrollPosition) <= 1) {
-                $('.btn_quick').addClass('bottom-48').removeClass('bottom-32');
+                if($(window).width() > 1024){
+                    if ((scrollHeight - scrollPosition) <= 1) {
+                        $('.btn_quick').addClass('xl:bottom-64').removeClass('xl:bottom-28');
+                    } else {
+                        $('.btn_quick').addClass('xl:bottom-28').removeClass('xl:bottom-64');
+                    }
                 } else {
-                $('.btn_quick').addClass('bottom-32').removeClass('bottom-48');
+                    if ((scrollHeight - scrollPosition) <= 1) {
+                        $('.btn_quick').addClass('bottom-72').removeClass('bottom-28');
+                    } else {
+                        $('.btn_quick').addClass('bottom-28').removeClass('bottom-72');
+                    }
                 }
             });
 

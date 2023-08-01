@@ -89,7 +89,7 @@
     </header>
 
     <!-- 환급 유형 선택! -->
-    <section class="lg:mb-[117px]">
+    <section class="xl:mb-[117px]">
         <div class="pt-24 relative container mx-auto max-w-screen-xl px-4">
             <div class="hidden lg:block mb-[89px] text-center">
                 <h2 class="font-bold text-5xl mb-7">환급 유형 선택!</h2>
@@ -325,7 +325,7 @@
             </div>
 
             <div class="my-8">
-                <img src="./public/skin/images/footer_logo.png" class="w-[169px] h-[35px]" alt="환급달인 로고" />
+                <img src="./public/skin/images/footer_logo.png" class="w-[126px] xl:w-[169px] h-[26px] xl:h-[35px]0" alt="환급달인 로고" />
             </div>
             
             <div class="mt-2">
@@ -347,11 +347,9 @@
         
         $(".accordion_tab").click(function() {
             if ($(this).hasClass("active")) {
-                // 이미 열린 요소를 클릭하면 닫힘 상태로 변경
                 $(this).parent().removeClass("active");
                 $(this).removeClass("active text-blue-500");
             } else {
-                // 현재 클릭 된 요소만 활성화
                 $(this).parent().addClass("active");
                 $(this).addClass("active text-blue-500");
             }
@@ -363,11 +361,18 @@
             $(window).on('scroll', function () {
                 let scrollHeight = $(document).height();
                 let scrollPosition = $(window).height() + $(window).scrollTop();
-                
-                if ((scrollHeight - scrollPosition) <= 1) {
-                $('.btn_quick').addClass('bottom-48').removeClass('bottom-32');
+                if($(window).width() > 1024){
+                    if ((scrollHeight - scrollPosition) <= 1) {
+                        $('.btn_quick').addClass('xl:bottom-64').removeClass('xl:bottom-28');
+                    } else {
+                        $('.btn_quick').addClass('xl:bottom-28').removeClass('xl:bottom-64');
+                    }
                 } else {
-                $('.btn_quick').addClass('bottom-32').removeClass('bottom-48');
+                    if ((scrollHeight - scrollPosition) <= 1) {
+                        $('.btn_quick').addClass('bottom-72').removeClass('bottom-28');
+                    } else {
+                        $('.btn_quick').addClass('bottom-28').removeClass('bottom-72');
+                    }
                 }
             });
 
