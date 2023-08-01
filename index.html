@@ -62,7 +62,7 @@
                     backgroundImage: {
                         'hero-section-01': "url('./public/skin/images/bg_section_01.png')",
                         'hero-section-01-m': "url('./public/skin/images/bg_section_01_m.png')",
-                        'hero-section-02': "url('https://images.unsplash.com/photo-1519219788971-8d9797e0928e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1444&q=80')",
+                        'hero-section-02': "url('./public/skin/images/bg_section_02.png')",
                     },
                 }
             }
@@ -379,14 +379,15 @@
     </section>
 
     <!-- 06. 메세지 배너 영역 -->
-    <section class="relative overflow-hidden bg-black">
-        <div class="container xl:mx-auto xl:w-[1100px] h-[680px] flex justify-center xl:items-center">
-            <h2 class="px-6 xl:px-0 mt-20 xl:mt-0 font-medium text-3xl xl:text-[3rem] text-center leading-snug text-white" data-aos="fade-up" data-aos-delay="800">
+    <section class="relative overflow-hidden">
+        <div class="container xl:mx-auto xl:max-w-[1100px] h-[614px] xl:h-[680px] flex justify-center xl:items-center">
+            <h2 class="z-10 px-6 xl:px-0 mt-20 pb-28 xl:mt-0 font-medium text-3xl xl:text-[3rem] text-center leading-snug text-white" data-aos="fade-up" data-aos-delay="800">
                 환급 후에도 고객님과 함께합니다.<br>
                 세무전문가에게 고객님의 고민을 들려주세요.
             </h2>
         </div>
-        <div class="absolute top-0 left-0 z-0 w-full h-screen bg-hero-section-02 bg-cover bg-center"></div>
+        <div class="absolute top-0 left-0 -z-2 w-full h-full bg-black bg-opacity-50"></div>
+        <div class="absolute top-0 left-0 -z-10 w-full h-full bg-hero-section-02 bg-no-repeat bg-center bg-top 2xl:bg-contain bg-black"></div>
     </section>
     
     <!-- Quick Menu -->
