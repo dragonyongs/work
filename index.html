@@ -380,9 +380,9 @@
     
     <!-- Quick Menu -->
     <div class="btn_quick z-30 fixed right-10 bottom-32 lg:bottom-64 border-sky-100 w-[60px] h-[60px] flex items-center justify-center transition-all rounded-xl shadow-base shadow-[#217CF3]">
-        <a href="#" class="open-modal rounded-full bg-white w-10 h-10" data-modal-id="modal-inquiry">
+        <button type="button" class="open-modal rounded-full bg-white w-10 h-10" data-modal-id="modal-inquiry">
             <!-- <img src="./public/skin/images/quick_pop.png" alt="w-full"> -->
-        </a>
+        </ㅠclass=>
     </div>
 
     <!-- Main modal -->
@@ -604,10 +604,12 @@
                 let modalId = $(this).data('modal-id');
                 $('#' + modalId).removeClass('hidden');
                 $('#' + modalId).addClass('flex');
+                $('body').addClass('lock-scroll');
             });
             $('.close-modal').on('click', function () {
                 $(this).closest('.modal').addClass('hidden');
                 $(this).closest('.modal').removeClass('flex');
+                $('body').removeClass('lock-scroll'); 
             });
         });
 

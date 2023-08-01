@@ -220,4 +220,9 @@
     .refundType div:hover span svg g > :is(path,circle,rect){
         fill: #fff !important;
     }
+
+    .lock-scroll {
+        overflow: hidden;
+        height: 100%;
+    }
 }
