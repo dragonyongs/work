@@ -391,7 +391,7 @@
     </section>
     
     <!-- Quick Menu -->
-    <div class="btn_quick z-30 fixed right-10 xl:right-28 bottom-16 xl:bottom-28 border-sky-100 w-[60px] h-[60px] flex items-center justify-center transition-all rounded-xl shadow-base shadow-[#217CF3]">
+    <div class="btn_quick z-30 fixed right-10 xl:right-28 bottom-16 xl:bottom-48 border-sky-100 w-[60px] h-[60px] flex items-center justify-center transition-all rounded-xl shadow-base shadow-[#217CF3]">
         <button type="button" class="open-modal" data-modal-id="modal-inquiry">
             <img src="./public/skin/images/icon_quick_say.png" alt="w-full">
         </button>
@@ -586,9 +586,9 @@
                 let scrollPosition = $(window).height() + $(window).scrollTop();
                 if($(window).width() > 1024){
                     if ((scrollHeight - scrollPosition) <= 1) {
-                        $('.btn_quick').addClass('xl:bottom-64').removeClass('xl:bottom-28');
+                        $('.btn_quick').addClass('xl:bottom-64').removeClass('xl:bottom-48');
                     } else {
-                        $('.btn_quick').addClass('xl:bottom-28').removeClass('xl:bottom-64');
+                        $('.btn_quick').addClass('xl:bottom-48').removeClass('xl:bottom-64');
                     }
                 } else {
                     if ((scrollHeight - scrollPosition) <= 1) {
