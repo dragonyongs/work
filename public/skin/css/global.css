@@ -64,6 +64,7 @@
         right: 20px;
         width: 32px;
         height: 32px;
+        color: #9A9A9A;
         transition: all 0.3s ease-out;
     }
     
@@ -72,6 +73,7 @@
     }
     .accordion .accordion_tab.active .accordion_arrow{
         transform: translateY(-50%) rotate(180deg);
+        color: rgb(59 130 246);
     }
     
     .accordion .accordion_content{
