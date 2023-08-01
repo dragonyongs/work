@@ -113,12 +113,12 @@
                             <div class="relative flex items-center my-4">
                                 <input id="terms-checkbox" type="checkbox" value="" class="float-left mr-[6px] mt-[0.15rem] h-7 w-7 appearance-none rounded-full border border-gray-400 before:content-[''] checked:border-[#2196F3] bg-white checked:bg-white checked:before:opacity-[0.16] checked:after:absolute checked:after:mt-[0.2rem] checked:after:ml-[0.5rem] checked:after:block checked:after:h-[1rem] checked:after:w-2.5 checked:after:rotate-45  checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-[#2196F3] checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer" required>
                                 <label for="terms-checkbox" class="ml-2 pt-1 text-lg font-normal text-gray-400 cursor-pointer">(필수) 이용약관 동의</label>
-                                <a href="#" class="absolute top-2 right-0 underline text-gray-400">보기</a>
+                                <button type="button" class="open-modal absolute top-2 right-0 underline text-gray-400" data-modal-id="modal-terms">보기</ㅠ>
                             </div>
                             <div class="relative flex items-center mt-4">
                                 <input id="privacyPolicy-checkbox" type="checkbox" value="" class="float-left mr-[6px] mt-[0.15rem] h-7 w-7 appearance-none rounded-full border border-gray-400 before:content-[''] checked:border-[#2196F3] bg-white checked:bg-white checked:before:opacity-[0.16] checked:after:absolute checked:after:mt-[0.2rem] checked:after:ml-[0.5rem] checked:after:block checked:after:h-[1rem] checked:after:w-2.5 checked:after:rotate-45  checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-[#2196F3] checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer" required>
                                 <label for="privacyPolicy-checkbox" class="ml-2 pt-1 text-lg font-normal text-gray-400 cursor-pointer">(필수) 개인정보 수집 및 이용 동의</label>
-                                <a href="#" class="absolute top-2 right-0 underline text-gray-400">보기</a>
+                                <button type="button" class="open-modal absolute top-2 right-0 underline text-gray-400" data-modal-id="modal-privacy">보기</button>
                             </div>
                         </div>
                     </div>
@@ -130,9 +130,8 @@
 
     <!-- Quick Menu -->
     <div class="btn_quick z-30 fixed right-10 bottom-32 lg:bottom-64 border-sky-100 w-[60px] h-[60px] flex items-center justify-center transition-all rounded-xl shadow-base shadow-[#217CF3]">
-        <a href="#" class="open-modal rounded-full bg-white w-10 h-10" data-modal-id="modal-inquiry">
-            <!-- <img src="./public/skin/images/quick_pop.png" alt="w-full"> -->
-        </a>
+        <button type="button" class="open-modal rounded-full bg-white w-10 h-10" data-modal-id="modal-inquiry">
+        </button>
     </div>
 
     <!-- Main modal -->
@@ -273,11 +272,11 @@
                 <nav>
                     <ul class="flex justify-center items-center gap-2">
                         <li>
-                            <a href="#" class="open-modal text-sm font-light hover:font-bold" data-modal-id="modal-terms">이용약관</a>
+                            <button type="button" class="open-modal text-sm font-light hover:font-bold" data-modal-id="modal-terms">이용약관</button>
                         </li>
                         <li class="">|</li>
                         <li>
-                            <a href="#" class="open-modal text-sm font-light hover:font-bold" data-modal-id="modal-privacy">개인정보 처리방침</a>
+                            <button type="button" class="open-modal text-sm font-light hover:font-bold" data-modal-id="modal-privacy">개인정보 처리방침</button>
                         </li>
                     </ul>
                 </nav>
@@ -294,7 +293,7 @@
             </div>
         </div>
     </footer>
-    
+
     <script type="text/javascript" src="./public/skin/js/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="./public/skin/js/aos.js"></script>
     <script type="text/javascript" src="./public/skin/js/jquery.easing.min.js"></script>
@@ -320,9 +319,9 @@
                     let scrollPosition = $(window).height() + $(window).scrollTop();
                     
                     if ((scrollHeight - scrollPosition) <= 1) {
-                    $('.btn_quick').addClass('bottom-48').removeClass('bottom-32');
+                    $('.btn_quick').addClass('bottom-52').removeClass('bottom-32');
                     } else {
-                    $('.btn_quick').addClass('bottom-32').removeClass('bottom-48');
+                    $('.btn_quick').addClass('bottom-32').removeClass('bottom-52');
                     }
                 });
             });
@@ -354,10 +353,12 @@
                 let modalId = $(this).data('modal-id');
                 $('#' + modalId).removeClass('hidden');
                 $('#' + modalId).addClass('flex');
+                $('body').addClass('lock-scroll');
             });
             $('.close-modal').on('click', function () {
                 $(this).closest('.modal').addClass('hidden');
                 $(this).closest('.modal').removeClass('flex');
+                $('body').removeClass('lock-scroll'); 
             });
         });
 
