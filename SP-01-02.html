@@ -5,26 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- normal favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="../path/to/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../path/to/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./path/to/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./path/to/favicon-16x16.png">
 
     <!-- safari favicon -->
-    <link rel="mask-icon" href="../path/to/safari-pinned-tab.svg" color="#002473">
+    <link rel="mask-icon" href="./path/to/safari-pinned-tab.svg" color="#002473">
 
     <!-- apple touch icon -->
-    <link rel="apple-touch-icon" href="../path/to/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="256x256" href="../path/to/apple-touch-icon-256x256.png">
+    <link rel="apple-touch-icon" href="./path/to/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="256x256" href="./path/to/apple-touch-icon-256x256.png">
 
     <!-- android icon -->
     <meta name="theme-color" content="#ffffff">
-    <link rel="manifest" href="/path/to/site.webmanifest">
+    <link rel="manifest" href="./path/to/site.webmanifest">
     <meta name="msapplication-TileColor" content="#002473">
 
     <!-- preview and description -->
-    <meta name="description" content="환급달인 설명">
-    <meta name="image" content="../path/to/apple-touch-icon-256x256.png">
+    <meta name="description" content="단, 3분 안에 무료조회! 믿을 수 있는 환급 전문 플랫폼!">
+    <meta name="image" content="./path/to/apple-touch-icon-256x256.png">
     <meta name="apple-mobile-web-app-title" content="환급달인">
     <meta name="application-name" content="환급달인">
+
+    <meta property="og:url" content="https://refundexpert.co.kr" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="image url" /> 
+    <meta property="og:title" content="환급달인" /> 
+    <meta property="og:description" content="단, 3분 안에 무료조회! 믿을 수 있는 환급 전문 플랫폼!" />
+
+    <meta name="twitter:card" content="summary" /> 
+    <meta name="twitter:title" content="환급달인" /> 
+    <meta name="twitter:description" content="단, 3분 안에 무료조회! 믿을 수 있는 환급 전문 플랫폼!" /> 
+    <meta name="twitter:image" content="image url" />
 
     <link rel="stylesheet" type="text/css" href="./public/skin/css/global.css">
     <link rel="stylesheet" type="text/css" href="./public/skin/css/font.css">
@@ -40,7 +51,7 @@
                         '4xl': '4rem',
                     },
                     colors: {
-                        base: '#2196F3',
+                        primary: '#2196F3',
                     },
                     boxShadow: {
                         base: '0 0 10px',
@@ -302,30 +313,34 @@
 
     <script>
         AOS.init();
-        //토글 형식으로 추후 변경  
-        $(".accordion_tab").click(function(){
-            $(".accordion_tab").each(function(){
+        
+        $(".accordion_tab").click(function() {
+            if ($(this).hasClass("active")) {
+                // 이미 열린 요소를 클릭하면 닫힘 상태로 변경
                 $(this).parent().removeClass("active");
                 $(this).removeClass("active text-blue-500");
-            });
-            $(this).parent().addClass("active");
-            $(this).addClass("active text-blue-500");
+            } else {
+                // 현재 클릭 된 요소만 활성화
+                $(this).parent().addClass("active");
+                $(this).addClass("active text-blue-500");
+            }
         });
+        
 
         $(document).ready(function() {
-            $(document).ready(function () {
-                $(window).on('scroll', function () {
-                    let scrollHeight = $(document).height();
-                    let scrollPosition = $(window).height() + $(window).scrollTop();
-                    
-                    if ((scrollHeight - scrollPosition) <= 1) {
-                    $('.btn_quick').addClass('bottom-52').removeClass('bottom-32');
-                    } else {
-                    $('.btn_quick').addClass('bottom-32').removeClass('bottom-52');
-                    }
-                });
+            //Window bottom Scroll
+            $(window).on('scroll', function () {
+                let scrollHeight = $(document).height();
+                let scrollPosition = $(window).height() + $(window).scrollTop();
+                
+                if ((scrollHeight - scrollPosition) <= 1) {
+                $('.btn_quick').addClass('bottom-48').removeClass('bottom-32');
+                } else {
+                $('.btn_quick').addClass('bottom-32').removeClass('bottom-48');
+                }
             });
 
+            //Progress Animation
             let currentIndex = 0;
             let $icon = $('ul.process > li > .iconMove');
             let $number = $('ul.process > li > .numberChange');
@@ -363,13 +378,14 @@
         });
 
         $(function(){
+            //Hero Text rolling Animation
             $(".words").textroll({
                 easing: 'easeInOutCirc',
                 speed: 1000,
                 delay: 600
             });
             $.syntax({
-                root: 'https://cdn.jsdelivr.net/npm/jquery-syntax@4.4.0/dist/'
+                root: './public/skin/js/'
             });
         });
     </script>
