@@ -40,7 +40,7 @@
                         '4xl': '4rem',
                     },
                     colors: {
-                        colorBase: '#2196F3',
+                        base: '#2196F3',
                     },
                     boxShadow: {
                         base: '0 0 10px',
@@ -59,6 +59,7 @@
     </script>
 </head>
 <body>
+    <!-- 헤더 GNB 영역 -->
     <header class="fixed z-20 py-[24px] lg:py-7 w-full bg-white">
         <div class="px-[24px] lg:px-0 lg:mx-auto lg:w-[1100px]">
             <nav class="relative z-50 flex justify-between">
@@ -121,7 +122,7 @@
                             </div>
                         </div>
                     </div>
-                    <button type="submit" class="block mx-auto w-3/4 lg:w-[337px] text-white bg-colorBase hover:shadow-base hover:shadow-[#217CF3] focus:ring-4 focus:outline-none focus:ring-blue-300 font-light rounded-full text-lg px-5 py-4 lg:py-2.5 text-center">환급액 조회하기</button>
+                    <button type="submit" class="block mx-auto w-3/4 lg:w-[337px] text-white bg-base hover:shadow-base hover:shadow-[#217CF3] focus:ring-4 focus:outline-none focus:ring-blue-300 font-light rounded-full text-lg px-5 py-4 lg:py-2.5 text-center">환급액 조회하기</button>
                 </form>
             </div>
         </div>
@@ -135,7 +136,7 @@
     </div>
 
     <!-- Main modal -->
-    <div id="modal-inquiry" class="modal hidden flex fixed top-0 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full  justify-center items-center">
+    <div id="modal-inquiry" class="modal hidden fixed top-0 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full  justify-center items-center">
         <div class="relative w-full max-w-sm max-h-full">
             <!-- Modal content -->
             <div class="relative bg-white shadow-modal rounded-[20px]">
@@ -177,7 +178,7 @@
                             </div>
                         </div>
 
-                        <button type="submit" class="close-modal w-full text-white bg-colorBase hover:shadow-base hover:shadow-[#217CF3] focus:ring-4 focus:outline-none focus:ring-blue-300 font-light rounded-full text-lg px-5 py-2.5 text-center">등록</button>
+                        <button type="submit" class="close-modal w-full text-white bg-base hover:shadow-base hover:shadow-[#217CF3] focus:ring-4 focus:outline-none focus:ring-blue-300 font-light rounded-full text-lg px-5 py-2.5 text-center">등록</button>
 
                     </form>
                 </div>
@@ -186,7 +187,7 @@
     </div>
 
     <!-- Terms modal -->
-    <div id="modal-terms" class="modal hidden flex fixed top-0 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full justify-center items-center">
+    <div id="modal-terms" class="modal hidden fixed top-0 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full justify-center items-center">
         <div class="relative w-full max-w-lg lg:max-w-[910px] max-h-full">
             <!-- Modal content -->
             <div class="relative bg-white shadow-modal rounded-[20px]">
@@ -219,14 +220,14 @@
                 </div>
                 <!-- Modal footer -->
                 <div class="flex items-center p-6 rounded-b dark:border-gray-600">
-                    <button type="submit" class="close-modal block w-1/4 mx-auto text-white bg-colorBase hover:shadow-base hover:shadow-[#217CF3] focus:ring-4 focus:outline-none focus:ring-blue-300 font-light rounded-full text-lg px-5 py-2.5 text-center">확인</button>
+                    <button type="button" class="close-modal block w-1/4 mx-auto text-white bg-base hover:shadow-base hover:shadow-[#217CF3] focus:ring-4 focus:outline-none focus:ring-blue-300 font-light rounded-full text-lg px-5 py-2.5 text-center">확인</button>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- privacy modal -->
-    <div id="modal-privacy" class="modal hidden flex fixed top-0 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full justify-center items-center">
+    <div id="modal-privacy" class="modal hidden fixed top-0 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full justify-center items-center">
         <div class="relative w-full max-w-lg lg:max-w-[910px] max-h-full">
             <!-- Modal content -->
             <div class="relative bg-white shadow-modal rounded-[20px]">
@@ -259,7 +260,7 @@
                 </div>
                 <!-- Modal footer -->
                 <div class="flex items-center p-6 rounded-b dark:border-gray-600">
-                    <button type="submit" class="close-modal block w-1/4 mx-auto text-white bg-colorBase hover:shadow-base hover:shadow-[#217CF3] focus:ring-4 focus:outline-none focus:ring-blue-300 font-light rounded-full text-lg px-5 py-2.5 text-center">확인</button>
+                    <button type="button" class="close-modal block w-1/4 mx-auto text-white bg-base hover:shadow-base hover:shadow-[#217CF3] focus:ring-4 focus:outline-none focus:ring-blue-300 font-light rounded-full text-lg px-5 py-2.5 text-center">확인</button>
                 </div>
             </div>
         </div>
@@ -353,9 +354,11 @@
             $('.open-modal').on('click', function () {
                 let modalId = $(this).data('modal-id');
                 $('#' + modalId).removeClass('hidden');
+                $('#' + modalId).addClass('flex');
             });
             $('.close-modal').on('click', function () {
                 $(this).closest('.modal').addClass('hidden');
+                $(this).closest('.modal').removeClass('flex');
             });
         });
 
