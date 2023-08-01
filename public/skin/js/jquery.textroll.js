@@ -43,7 +43,7 @@
                 display   : 'inline-block',
                 overflow  : 'hidden',
                 position  : 'relative',
-                height    : $($children[0]).outerHeight() +'px',
+                height    : ($($children[0]).outerHeight() - 2) +'px',
                 lineHeight: $($children[0]).outerHeight() +'px'
             });
 
