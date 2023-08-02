@@ -102,7 +102,7 @@
                 <h2 class="font-bold text-5xl mb-7">환급 유형 선택!</h2>
             </div>
             <div class="refundType w-[96%] lg:w-[560px] mx-auto mt-12 lg:mt-0">
-                <div class="relative h-[229px] mb-16 bg-white hover:bg-[#4C9EFB] hover:text-white shadow-sub rounded-[20px] cursor-pointer">
+                <div class="relative h-[229px] mb-16 bg-white hover:bg-[#4C9EFB] hover:text-white shadow-sub rounded-[20px] cursor-pointer transition-all">
                     <a href="./SP-01-02.html" class="w-full h-full pt-12 pl-12 inline-block" target="_self">
                         <h3 class="font-medium text-2xl">법인사업자</h3>
                         <span class="block absolute bottom-8 right-8 w-[113px] h-[95px]">
@@ -142,7 +142,7 @@
                         </span>
                     </a>
                 </div>
-                <div class="relative h-[229px] mb-16 bg-white hover:bg-[#4C9EFB] hover:text-white shadow-sub rounded-[20px] cursor-pointer">
+                <div class="relative h-[229px] mb-16 bg-white hover:bg-[#4C9EFB] hover:text-white shadow-sub rounded-[20px] cursor-pointer transition-all">
                     <a href="./SP-01-03.html" class="w-full h-full pt-12 pl-12 inline-block" target="_self">
                         <h3 class="font-medium text-2xl">개인사업자</h3>
                         <span class="block absolute bottom-8 right-8 w-[113px] h-[95px]">
@@ -352,6 +352,7 @@
     <script>
         AOS.init();
         
+        //Accordion FAQ
         $(".accordion_tab").click(function() {
             if ($(this).hasClass("active")) {
                 $(this).parent().removeClass("active");
@@ -362,7 +363,6 @@
             }
         });
         
-
         $(document).ready(function() {
             //Window bottom Scroll
             $(window).on('scroll', function () {
