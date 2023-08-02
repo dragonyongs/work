@@ -42,7 +42,7 @@
     }
 
     .accordion{
-        height: 60px;
+        height: 64px;
         overflow: hidden;
         transition: all .3s ease-in-out;
     }
@@ -86,9 +86,6 @@
         .accordion .accordion_item{
             font-size: 16px;
         }
-        .accordion:nth-child(4){
-            height: 86px;
-        }
         .accordion.active{
             height: 152px;
         }
@@ -99,21 +96,48 @@
             height: 180px;
         }
     }
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 475px) {
+        .accordion:nth-child(1),
+        .accordion:nth-child(4){
+            height: 86px;
+        }
         .accordion .accordion_tab{
             padding: 18px 22px;
         }
         .accordion .accordion_content{
             padding: 0 22px 18px;
         }
+        .accordion:nth-child(1).active{
+            height: 152px;
+        }
         .accordion:nth-child(2).active{
-            height: 176px;
+            height: 152px;
         }
         .accordion:nth-child(4).active{
-            height: 226px;
+            height: 180px;
         }
     }
 
+    @media screen and (max-width: 425px) {
+        .accordion:nth-child(1).active{
+            height: 172px;
+        }
+        .accordion:nth-child(2).active{
+            height: 184px;
+        }
+        .accordion:nth-child(3).active{
+            height: 132px;
+        }
+        .accordion:nth-child(4).active{
+            height: 188px;
+        }
+    }
+    
+    @media screen and (max-width: 375px) {
+        .accordion:nth-child(4).active{
+            height: 200px;
+        }
+    }
     .words_wrapper{
         padding-bottom: 20px;
     }
@@ -158,5 +182,21 @@
     @keyframes swing {
         0% { transform: rotate(3deg); }
         100% { transform: rotate(-3deg); }
+    }
+    .modal{
+        background-color: rgba(59, 63, 78, 0.4);
+        backdrop-filter: blur(4px);
+    }
+
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+    /* 파이어폭스에서의 초기화 방법 */
+    input[type=number] {
+        -moz-appearance: textfield;
     }
 }
