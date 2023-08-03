@@ -96,6 +96,12 @@
             height: 180px;
         }
     }
+    @media screen and (max-width: 786px) {
+        .accordion:nth-child(1).active,
+        .accordion:nth-child(4).active{
+            height: 140px;
+        }
+    }
     @media screen and (max-width: 475px) {
         .accordion:nth-child(1),
         .accordion:nth-child(4){

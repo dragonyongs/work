@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="initial-scale= 1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, user-scalable=no"/>
 
         <!-- normal favicon -->
         <link rel="icon" type="image/png" sizes="32x32" href="./path/to/favicon-32x32.png">
@@ -26,23 +26,29 @@
         <meta name="apple-mobile-web-app-title" content="환급달인">
         <meta name="application-name" content="환급달인">
 
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-touch-fullscreen" content="yes" />
+        <meta name="apple-mobile-web-app-title" content="Refund Expert" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="#002473" />
+
         <!-- preview and description -->
-        <!-- <meta property="og:url" content="https://refundexpert.co.kr" />
+        <meta property="og:url" content="http://refundexpert.iptime.org/" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="image url" /> 
+        <meta property="og:image" content="./path/to/android-chrome-512x512.png" /> 
         <meta property="og:title" content="환급달인" /> 
         <meta property="og:description" content="단, 3분 안에 무료조회! 믿을 수 있는 환급 전문 플랫폼!" />
 
         <meta name="twitter:card" content="summary" /> 
         <meta name="twitter:title" content="환급달인" /> 
         <meta name="twitter:description" content="단, 3분 안에 무료조회! 믿을 수 있는 환급 전문 플랫폼!" /> 
-        <meta name="twitter:image" content="image url" /> -->
+        <meta name="twitter:image" content="./path/to/android-chrome-512x512.png" />
 
         <link rel="stylesheet" type="text/css" href="./public/skin/css/global.css">
         <link rel="stylesheet" type="text/css" href="./public/skin/css/font.css">
         <link rel="stylesheet" type="text/css" href="./public/skin/css/aos.css">
         <link rel="stylesheet" type="text/css" href="./public/skin/css/jquerysctipttop.css">
-            <!--
+        <!--
             * https://tailwindcss.com/docs/guides/laravel
             * Tailwind CSS installation
             * npm install -D tailwindcss postcss autoprefixer
@@ -100,16 +106,16 @@
         </header>
 
         <!-- 01. 메인 배너 영역 -->
-        <section>
-            <div class="pt-24 relative container xl:mx-auto xl:w-[1100px] px-4">
-                <div class="container xl:mx-auto flex xl:px-5 xl:py-24 xl:flex-row flex-col items-center mb-16 xl:mb-0">
+        <section class="pt-24">
+            <div class="relative container mx-auto xl:w-[1100px] px-4">
+                <div class="container mx-auto flex xl:px-5 xl:py-24 xl:flex-row flex-col items-center mb-16 xl:mb-0">
                     <div class="md:w-1/2 flex flex-col items-center justify-center xl:justify-start xl:items-start mt-16 mb-24 xl:my-0"> <!--xl:flex-grow md:w-1/2 md:items-start md:text-left mb-16 md:mb-0 -->
-                        <h4 class="mb-5 xl:text-[18px]" data-aos="fade-up" data-aos-delay="1500" data-aos-duration="1200">단, 3분 안에 무료조회 가능!</h4>
-                        <h1 class="inline-block xl:block text-center xl:text-left mb-4 font-bold text-gray-900 text-5xl xl:text-[54px] leading-tight xl:leading-[70px]" data-aos="fade-up" data-aos-delay="900" data-aos-duration="1200">
+                        <h4 class="mb-5 xl:text-[18px]" data-aos="fade-up" data-aos-delay="1500">단, 3분 안에 무료조회 가능!</h4>
+                        <h1 class="inline-block xl:block text-center xl:text-left mb-4 font-bold text-gray-900 text-5xl xl:text-[54px] leading-tight xl:leading-[70px]" data-aos="fade-up" data-aos-delay="900">
                             믿을 수 있는<br>
                             환급 전문 플랫폼
                         </h1>
-                        <div class="words_wrapper" data-aos="fade-up" data-aos-delay="1500" data-aos-duration="1200">
+                        <div class="words_wrapper" data-aos="fade-up" data-aos-delay="1600">
                             <div class="words">
                                 <span class="text-center xl:text-left">대구 제조업(법인)<i>|</i><em>환급액 11.2억원</em></span>
                                 <span class="text-center xl:text-left">경기 병·의원(개인)<i>|</i><em>환급액 4.2억원</em></span>
@@ -117,18 +123,17 @@
                                 <span class="text-center xl:text-left">경기 제조업(법인)<i>|</i><em>환급액 3.15억원</em></span>
                                 <span class="text-center xl:text-left">부산 도소매(개인)<i>|</i><em>환급액 7천 만원</em></span>
                                 <span class="text-center xl:text-left">울산 제조업(법인)<i>|</i><em>환급액 9천 만원</em></span>
-                                <span class="text-center xl:text-left">대구 제조업(법인)<i>|</i><em>환급액 11.2억원</em></span>
                             </div>
                         </div>
-                        <div class="flex items-center" data-aos="fade-up" data-aos-delay="1500" data-aos-duration="1200">
+                        <div class="flex items-center" data-aos="fade-up" data-aos-delay="1700">
                             <a href="./SP-01-01.html" class="flex items-center mt-auto font-normal leading-none text-white bg-[#2196F3] border-0 py-3 px-6 w-full focus:outline-none rounded-full text-xl tracking-wider hover:shadow-base hover:shadow-[#217CF3] hover:transition-all">
                                 <span class="inline-block text-base font-medium leading-none py-1 tracking-tight">무료 환급 조회하기</span>
                             </a>
                         </div>
                     </div>
-                    <div class="md:w-1/2 xl:max-w-xl w-5/6 text-center" data-aos="fade-up" data-aos-delay="900" data-aos-duration="1200">
+                    <div class="md:w-1/2 xl:max-w-xl w-5/6 text-center" data-aos="fade-up" data-aos-delay="1000">
                         <img src="./public/skin/images/hero_img_01.png" class="inline-block w-[203px] xl:w-[329px] h-[416px] xl:h-[640px]" alt="hero">
-                        <div class="-z-10 absolute -top-20 xl:-top-32 lg:left-14 xl:left-0" data-aos="zoom-in" data-aos-delay="2400">
+                        <div class="-z-10 absolute -top-20 xl:-top-32 left-14 xl:left-0" data-aos="zoom-in" data-aos-delay="2400">
                             <img src="./public/skin/images/hero_img_back_01.png" class="inline-block w-[381px] xl:w-[601px] h-[285px] xl:h-[421px]" alt="hero_back">
                         </div>
                     </div>
@@ -140,10 +145,10 @@
         <section class="py-20 xl:pt-[115px] xl:pb-[98px] bg-[#F8F9FA]">
             <div class="relative container mx-auto max-w-2xl xl:max-w-[1100px]">
                 <div class="max-w-md xl:max-w-none mx-auto mb-12 xl:mb-[89px] px-12 xl:px-0 text-center aos-init aos-animate" data-aos="fade-up" data-aos-delay="600">
-                    <h2 class="font-medium xl:font-bold text-4xl xl:text-5xl">환급달인에서 지금 바로 조회해야 하는 이유!</h2>
+                    <h2 class="font-bold text-3xl xl:text-5xl">환급달인에서 지금 바로 조회해야 하는 이유!</h2>
                 </div>
-                <div class="flex flex-wrap lg:flex-col xl:flex-row justify-center items-start mx-auto md:max-w-md xl:max-w-none">
-                    <div class="px-4 md:px-0 md:mx-auto mb-7 xl:mb-0 aos-init aos-animate" data-aos="fade-up" data-aos-delay="900">
+                <div class="flex flex-wrap flex-col xl:flex-row justify-center items-start mx-auto max-w-sm sxl:max-w-none">
+                    <div class="px-4 md:px-0 mx-auto mb-7 xl:mb-0 aos-init aos-animate" data-aos="fade-up" data-aos-delay="900">
                         <div class="w-[300px] md:mx-auto h-full px-12 rounded-[20px] bg-white hover:bg-[#E2D3FA] flex flex-col justify-center items-center shadow-card transition-all">
                             <div class="w-[174px] h-[174px] rounded-full bg-[#ECECFE] flex justify-center items-center mt-10">
                                 <img src="./public/skin/images/illust_tax.png" alt="tax">
@@ -154,7 +159,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="px-4 md:px-0 md:mx-auto mb-7 xl:mb-0 aos-init aos-animate" data-aos="fade-up" data-aos-delay="1100">
+                    <div class="px-4 md:px-0 mx-auto mb-7 xl:mb-0 aos-init aos-animate" data-aos="fade-up" data-aos-delay="1100">
                         <div class="w-[300px] mx-auto h-full px-12 rounded-[20px] bg-white hover:bg-[#FFEFB4] flex flex-col justify-center items-center shadow-card transition-all">
                             <div class="w-[174px] h-[174px] rounded-full bg-[#FFF3DC] flex justify-center items-center mt-10">
                                 <img src="./public/skin/images/illust_hourglass.png" alt="">
@@ -165,7 +170,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="md:mx-auto aos-init aos-animate" data-aos="fade-up" data-aos-delay="1300">
+                    <div class="mx-auto aos-init aos-animate" data-aos="fade-up" data-aos-delay="1300">
                         <div class="w-[300px] mx-auto h-full px-12 rounded-[20px] bg-white hover:bg-[#BBE4F6] flex flex-col justify-center items-center shadow-card transition-all">
                             <div class="w-[174px] h-[174px] rounded-full bg-[#E9F6FE] flex justify-center items-center mt-10">
                                 <img src="./public/skin/images/illust_scales.png" alt="">
@@ -184,7 +189,7 @@
         <section class="py-20">
             <div class="relative container mx-auto max-w-screen-xl px-4" data-aos="fade-up" data-aos-duration="1200">
                 <div class="mb-[89px] text-center">
-                    <h2 class="font-medium xl:font-bold text-4xl xl:text-5xl mb-4">
+                    <h2 class="font-bold text-3xl xl:text-5xl mb-4">
                         3분이면 OK! <br class="inline-block xl:hidden">간편한 예상 환급금 조회
                     </h2>
                     <p class="text-lg xl:text-2xl font-normal text-[#707070] tracking-[-0.88px]">환급금 조회는 누구나 무료입니다</p>
@@ -195,8 +200,8 @@
                     <span class="absolute bottom-20 xl:bottom-[84px] left-0 -z-10 inline-block w-full h-[1px] bg-slate-300" data-aos="fade-up" data-aos-duration="1000"></span>
                     <span class="absolute top-44 left-0 -z-10 inline-block xl:hidden w-full h-[1px] bg-slate-300" data-aos="fade-up" data-aos-duration="1200"></span>
                     <div class="mx-auto max-w-2xl xl:max-w-[1100px]">
-                        <ul class="process flex flex-wrap justify-between items-top">
-                            <li class="relative w-1/2 xl:w-1/4 flex justify-start flex-col items-center mb-20 xl:mb-0" data-aos="fade-right" data-aos-delay="900">
+                        <ul class="process flex flex-wrap justify-center xl:justify-between items-top">
+                            <li class="relative w-1/2 sm:w-2/5 xl:w-1/4 flex justify-start flex-col items-center mb-20 xl:mb-0" data-aos="fade-right" data-aos-delay="900">
                                 <div class="iconMove absolute top-0 left-0 w-full h-[89px] flex items-center justify-center transition-all">
                                     <img src="./public/skin/images/icon_progress_01.png" class="w-[70px]" alt="">
                                 </div>
@@ -206,18 +211,18 @@
                                 <span class="font-medium text-lg">카카오톡 계정 로그인</span>
                             </li>
 
-                            <li class="relative w-1/2 xl:w-1/4 flex justify-start flex-col items-center mb-20 xl:mb-0" data-aos="fade-right" data-aos-delay="1200">
+                            <li class="relative w-2/5 xl:w-1/4 flex justify-start flex-col items-center mb-20 xl:mb-0" data-aos="fade-right" data-aos-delay="1200">
                                 <div class="iconMove absolute top-0 left-0 w-full h-[89px] flex items-center justify-center transition-all">
                                     <img src="./public/skin/images/icon_progress_02.png" class="w-[80px]" alt="">
                                 </div>
                                 <div class="numberChange w-8 h-8 mt-40 mb-5 rounded-full bg-sky-200 text-center align-middle">
                                     <span class="leading-8 text-dark text-sm font-medium">02</span>
                                 </div>
-                                <span class="font-medium text-lg">단, 3분 이내 데이터 수집</span>
-                                <span class="font-light text-sm">(데이터가 많은 경우 최대 1시간)</span>
+                                <span class="font-medium text-lg tracking-tighter md:tracking-tight">단, 3분 이내 데이터 수집</span>
+                                <span class="font-light text-sm tracking-tighter md:tracking-tight">(데이터가 많은 경우 최대 1시간)</span>
                             </li>
 
-                            <li class="relative w-1/2 xl:w-1/4 flex justify-start flex-col items-center mb-5 xl:mb-0" data-aos="fade-right" data-aos-delay="1500">
+                            <li class="relative w-2/5 xl:w-1/4 flex justify-start flex-col items-center mb-5 xl:mb-0" data-aos="fade-right" data-aos-delay="1500">
                                 <div class="iconMove absolute top-0 left-0 w-full h-[89px] flex items-center justify-center transition-all">
                                     <img src="./public/skin/images/icon_progress_03.png" class="w-[70px]" alt="">
                                 </div>
@@ -227,7 +232,7 @@
                                 <span class="font-medium text-lg">카카오톡 계정 로그인</span>
                             </li>
 
-                            <li class="relative w-1/2 xl:w-1/4 flex justify-start flex-col items-center mb-5 xl:mb-0" data-aos="fade-right" data-aos-delay="1800">
+                            <li class="relative w-2/5 xl:w-1/4 flex justify-start flex-col items-center mb-5 xl:mb-0" data-aos="fade-right" data-aos-delay="1800">
                                 <div class="iconMove absolute top-0 left-0 w-full h-[89px] flex items-center justify-center transition-all">
                                     <img src="./public/skin/images/icon_progress_04.png" class="w-[70px]" alt="">
                                 </div>
@@ -246,7 +251,7 @@
         <section class="bg-hero-section-01-m xl:bg-hero-section-01 bg-center bg-cover px-5 py-20 xl:py-24">
             <div class="container xl:mx-auto w-full h-[809px] xl:w-[1100px] xl:h-[860px] flex xl:flex-row flex-col items-center" data-aos="fade-up" data-aos-delay="900">
                 <div class="max-w-2xl xl:max-w-2/3 flex flex-col xl:items-start xl:text-left mb-16 xl:mb-0 items-center text-center">
-                    <h1 class="title-font text-3xl xl:text-[48px] mb-10 font-bold text-gray-900 leading-normal">환급달인은 전문세무사가 
+                    <h1 class="text-3xl xl:text-[3rem] mb-10 font-bold text-gray-900 leading-normal tracking-tight">환급달인은 전문세무사가 
                         <br class="hidden sm:block">환급가능액을 더블 체크합니다.
                     </h1>
                     <div class="w-50" data-aos="fade-up" data-aos-delay="1100">
@@ -261,13 +266,13 @@
 
         <!-- 05. 자주하는 질문: FAQ 영역 -->
         <section>
-            <div class="container px-5 py-24 mx-auto max-w-2xl xl:max-w-[1100px]" data-aos="fade-up" data-aos-delay="900">
+            <div class="container px-5 py-24 mx-auto max-w-xl sm:max-w-xl md:max-w-2xl xl:max-w-[1100px]" data-aos="fade-up" data-aos-delay="900">
                 <div class="mb-12 text-center">
-                    <h2 class="font-bold text-3xl xl:text-5xl">자주하는 질문은 여기서 확인!</h2>
+                    <h2 class="font-bold text-[28px] xl:text-5xl tracking-tight">자주하는 질문은 여기서 확인!</h2>
                 </div>
 
                 <div class="wrapper flex flex-col justify-center items-center">
-                    <div class="accordion w-full xl:w-[920px] mb-5 bg-white rounded-xl border border-gray-400" data-aos="fade-up" data-aos-delay="1200">
+                    <div class="accordion w-full mb-5 bg-white rounded-xl border border-gray-400" data-aos="fade-up" data-aos-delay="1200">
                         <div class="accordion_tab">
                             <div class="flex gap-3 xl:gap-6">
                                 <span>Q.</span>
@@ -287,7 +292,7 @@
                         </div>
                     </div>
 
-                    <div class="accordion w-full xl:w-[920px] mb-5 bg-white rounded-xl border border-gray-400" data-aos="fade-up" data-aos-delay="1400">
+                    <div class="accordion w-full mb-5 bg-white rounded-xl border border-gray-400" data-aos="fade-up" data-aos-delay="1400">
                         <div class="accordion_tab">
                             <div class="flex gap-3 xl:gap-6">
                                 <span>Q.</span>
@@ -307,7 +312,7 @@
                         </div>
                     </div>
 
-                    <div class="accordion w-full xl:w-[920px] mb-5 bg-white rounded-xl border border-gray-400" data-aos="fade-up" data-aos-delay="1600">
+                    <div class="accordion w-full mb-5 bg-white rounded-xl border border-gray-400" data-aos="fade-up" data-aos-delay="1600">
                         <div class="accordion_tab">
                             <div class="flex gap-3 xl:gap-6">
                                 <span>Q.</span>
@@ -327,11 +332,11 @@
                         </div>
                     </div>
                     
-                    <div class="accordion w-full xl:w-[920px] mb-5 bg-white rounded-xl border border-gray-400" data-aos="fade-up" data-aos-delay="1800">
+                    <div class="accordion w-full mb-5 bg-white rounded-xl border border-gray-400" data-aos="fade-up" data-aos-delay="1800">
                         <div class="accordion_tab">
                             <div class="flex gap-3 xl:gap-6">
                                 <span>Q.</span>
-                                <span>저는 담당 세무사가 있는데, <br class="xl:hidden">환급달인을 사용해도 될까요?</span>
+                                <span>저는 담당 세무사가 있는데, <br class="sm:hidden">환급달인을 사용해도 될까요?</span>
                             </div>
                             <div class="accordion_arrow">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -348,7 +353,7 @@
                     </div>
                 </div>
 
-                <div class="-m-4 bg-transparent mt-5 xl:mt-20 marquee-container" data-aos="fade-up" data-aos-delay="2000">
+                <div class="-m-4 bg-transparent mt-5 xl:mt-20 marquee-container" data-aos="fade-up" data-aos-delay="1700">
                     <span class="z-10 absolute top-0 left-0 w-20 h-full bg-gradient-to-r from-white to-transparent"></span>
                     <span class="z-10 absolute top-0 right-0 w-20 h-full bg-gradient-to-r from-transparent to-white"></span>
                     <div class="marquee">
@@ -391,7 +396,7 @@
 
         <!-- 06. 메세지 배너 영역 -->
         <section class="relative overflow-hidden">
-            <div class="container xl:mx-auto xl:max-w-[1100px] h-[614px] xl:h-[680px] flex justify-center xl:items-center">
+            <div class="container mx-auto xl:max-w-[1100px] h-[614px] xl:h-[680px] flex justify-center xl:items-center">
                 <h2 class="z-10 px-6 xl:px-0 mt-20 pb-28 xl:mt-0 font-medium text-3xl xl:text-[3rem] text-center leading-snug text-white" data-aos="fade-up" data-aos-delay="800">
                     환급 후에도 고객님과 함께합니다.<br>
                     세무전문가에게 고객님의 고민을 들려주세요.
@@ -409,7 +414,7 @@
         </div>
 
         <!-- Main modal -->
-        <div id="modal-inquiry" class="modal hidden fixed top-0 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 max-h-full  justify-center items-center">
+        <div id="modal-inquiry" class="modal hidden fixed top-0 left-0 right-0 z-50 w-full h-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 max-h-full justify-center items-center">
             <div class="relative w-full max-w-sm max-h-full">
                 <!-- Modal content -->
                 <div class="relative bg-white shadow-modal rounded-[20px]">
@@ -434,7 +439,7 @@
                             </div>
                             <div>
                                 <label for="phone" class="block mb-1 text-md font-normal text-gray-900">연락처</label>
-                                <input type="number" name="phone" id="phone" autocomplete="off" maxlength="11" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 placeholder-[#C9C7C7]" placeholder=" - 없이 입력해주세요." required>
+                                <input type="number" name="phone" id="phone" autocomplete="off" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 placeholder-[#C9C7C7]" placeholder=" - 없이 입력해주세요." maxlength="11" oninput="maxLengthCheck(this)" required>
                             </div>
                             <div>
                                 <label for="message" class="block mb-1 text-md font-normal text-gray-900">문의내용</label>
@@ -442,19 +447,17 @@
                             </div>
                             <div class="pb-8">
                                 <div class="relative flex items-center mb-4">
-                                    <input id="terms-checkbox" type="checkbox" value="" class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-200 rounded-3xl focus:ring-blue-500 focus:ring-2" required>
-                                    <label for="terms-checkbox" class="ml-2 text-sm font-normal text-gray-500 cursor-pointer">(필수) 이용약관 동의</label>
-                                    <button type="button" class="open-modal absolute top-0 right-0" data-modal-id="modal-terms"><span class="text-sm text-gray-500 underline">보기</span></button>
+                                    <input id="modal-terms-checkbox" type="checkbox" value="" class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-200 rounded-3xl focus:ring-blue-500 focus:ring-2" required>
+                                    <label for="modal-terms-checkbox" class="ml-2 text-sm font-normal text-gray-500 hover:text-blue-800 cursor-pointer">(필수) 이용약관 동의</label>
+                                    <button type="button" class="open-modal absolute top-0 right-0" data-modal-id="modal-terms"><span class="text-sm text-gray-500 hover:text-primary underline">보기</span></button>
                                 </div>
                                 <div class="relative flex items-center mb-4">
-                                    <input id="privacyPolicy-checkbox" type="checkbox" value="" class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-200 rounded-3xl focus:ring-blue-500 focus:ring-2" required>
-                                    <label for="privacyPolicy-checkbox" class="ml-2 text-sm font-normal text-gray-500 cursor-pointer">(필수) 개인정보 수집 및 이용 동의</label>
-                                    <button type="button" class="open-modal absolute top-0 right-0" data-modal-id="modal-privacy"><span class="text-sm text-gray-500 underline">보기</span></button>
+                                    <input id="modal-privacyPolicy-checkbox" type="checkbox" value="" class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-200 rounded-3xl focus:ring-blue-500 focus:ring-2" required>
+                                    <label for="modal-privacyPolicy-checkbox" class="ml-2 text-sm font-normal text-gray-500 hover:text-blue-800 cursor-pointer">(필수) 개인정보 수집 및 이용 동의</label>
+                                    <button type="button" class="open-modal absolute top-0 right-0" data-modal-id="modal-privacy"><span class="text-sm text-gray-500 hover:text-primary underline">보기</span></button>
                                 </div>
                             </div>
-
-                            <button type="submit" class="close-modal w-full text-white bg-primary hover:shadow-base hover:shadow-[#217CF3] focus:ring-4 focus:outline-none focus:ring-blue-300 font-light rounded-full text-lg px-5 py-2.5 text-center hover:transition-all">등록</button>
-
+                            <button type="submit" class="w-full text-white bg-primary hover:shadow-base hover:shadow-[#217CF3] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-lg px-5 py-2.5 text-center hover:transition-all">등록</button>
                         </form>
                     </div>
                 </div>
@@ -462,7 +465,7 @@
         </div>
 
         <!-- Terms modal -->
-        <div id="modal-terms" class="modal hidden fixed top-0 left-0 right-0 z-60 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 max-h-full justify-center items-center">
+        <div id="modal-terms" class="modal hidden fixed top-0 left-0 right-0 z-60 w-full h-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 max-h-full justify-center items-center">
             <div class="relative w-full max-w-lg xl:max-w-[910px] max-h-full">
                 <!-- Modal content -->
                 <div class="relative bg-white shadow-modal rounded-[20px]">
@@ -495,14 +498,14 @@
                     </div>
                     <!-- Modal footer -->
                     <div class="flex items-center p-6 rounded-b dark:border-gray-600">
-                        <button type="button" class="close-modal block w-1/4 mx-auto text-white bg-primary hover:shadow-base hover:shadow-[#217CF3] focus:ring-4 focus:outline-none focus:ring-blue-300 font-light rounded-full text-lg px-5 py-2.5 text-center hover:transition-all">확인</button>
+                        <button type="button" class="close-modal block w-1/4 mx-auto text-white bg-primary hover:shadow-base hover:shadow-[#217CF3] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-lg px-5 py-2.5 text-center hover:transition-all">확인</button>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- privacy modal -->
-        <div id="modal-privacy" class="modal hidden fixed top-0 left-0 right-0 z-70 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 max-h-full justify-center items-center">
+        <div id="modal-privacy" class="modal hidden fixed top-0 left-0 right-0 z-70 w-full h-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 max-h-full justify-center items-center">
             <div class="relative w-full max-w-lg xl:max-w-[910px] max-h-full">
                 <!-- Modal content -->
                 <div class="relative bg-white shadow-modal rounded-[20px]">
@@ -535,14 +538,14 @@
                     </div>
                     <!-- Modal footer -->
                     <div class="flex items-center p-6 rounded-b dark:border-gray-600">
-                        <button type="button" class="close-modal block w-1/4 mx-auto text-white bg-primary hover:shadow-base hover:shadow-[#217CF3] focus:ring-4 focus:outline-none focus:ring-blue-300 font-light rounded-full text-lg px-5 py-2.5 text-center hover:transition-all">확인</button>
+                        <button type="button" class="close-modal block w-1/4 mx-auto text-white bg-primary hover:shadow-base hover:shadow-[#217CF3] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-lg px-5 py-2.5 text-center hover:transition-all">확인</button>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- maketing modal -->
-        <div id="modal-marketing" class="modal hidden fixed top-0 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full justify-center items-center">
+        <div id="modal-marketing" class="modal hidden fixed top-0 left-0 right-0 z-50 w-full h-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 max-h-full justify-center items-center">
             <div class="relative w-full max-w-lg lg:max-w-2xl max-h-full">
                 <!-- Modal content -->
                 <div class="relative bg-white shadow-modal rounded-[20px]">
@@ -569,7 +572,7 @@
                     </div>
                     <!-- Modal footer -->
                     <div class="flex items-center p-6 rounded-b dark:border-gray-600">
-                        <button type="button" class="close-modal block w-1/4 mx-auto text-white bg-primary hover:shadow-base hover:shadow-[#217CF3] focus:ring-4 focus:outline-none focus:ring-blue-300 font-light rounded-full text-lg px-5 py-2.5 text-center hover:transition-all">확인</button>
+                        <button type="button" class="close-modal block w-1/4 mx-auto text-white bg-primary hover:shadow-base hover:shadow-[#217CF3] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-lg px-5 py-2.5 text-center hover:transition-all">확인</button>
                     </div>
                 </div>
             </div>
@@ -586,7 +589,7 @@
                             </li>
                             <li>|</li>
                             <li>
-                                <button type="button" class="open-modal text-sm font-light hover:font-bold" data-modal-id="modal-privacy">개인정보 처리방침</button>
+                                <button type="button" class="open-modal text-sm font-medium hover:font-bold" data-modal-id="modal-privacy">개인정보 처리방침</button>
                             </li>
                         </ul>
                     </nav>
@@ -613,20 +616,28 @@
         <script>
             AOS.init();
             
-            //Accordion FAQ
-            $(".accordion_tab").click(function() {
-                if ($(this).hasClass("active")) {
-                    // 이미 열린 요소를 클릭하면 닫힘 상태로 변경
-                    $(this).parent().removeClass("active");
-                    $(this).removeClass("active text-blue-500");
-                } else {
-                    // 현재 클릭 된 요소만 활성화
-                    $(this).parent().addClass("active");
-                    $(this).addClass("active text-blue-500");
+            //maxlength fixed
+            function maxLengthCheck(object) {
+                const maxLength = parseInt(object.getAttribute('maxlength'));
+                if (object.value.length > maxLength) {
+                    object.value = object.value.slice(0, maxLength);
                 }
-            });
+            }
 
             $(document).ready(function() {
+                //Accordion FAQ
+                $(".accordion_tab").click(function() {
+                    if ($(this).hasClass("active")) {
+                        // 이미 열린 요소를 클릭하면 닫힘 상태로 변경
+                        $(this).parent().removeClass("active");
+                        $(this).removeClass("active text-blue-500");
+                    } else {
+                        // 현재 클릭 된 요소만 활성화
+                        $(this).parent().addClass("active");
+                        $(this).addClass("active text-blue-500");
+                    }
+                });
+
                 //Window bottom Scroll
                 $(window).on('scroll', function () {
                     let scrollHeight = $(document).height();
@@ -694,6 +705,7 @@
                     root: './public/js/'
                 });
             });
+            
         </script>
     </body>
 </html>

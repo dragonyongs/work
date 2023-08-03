@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="initial-scale= 1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, user-scalable=no"/>
 
         <!-- normal favicon -->
         <link rel="icon" type="image/png" sizes="32x32" href="./path/to/favicon-32x32.png">
@@ -26,6 +26,12 @@
         <meta name="apple-mobile-web-app-title" content="환급달인">
         <meta name="application-name" content="환급달인">
 
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-touch-fullscreen" content="yes" />
+        <meta name="apple-mobile-web-app-title" content="Refund Expert" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="#002473" />
+
         <!-- preview and description -->
         <!-- <meta property="og:url" content="https://refundexpert.co.kr" />
         <meta property="og:type" content="website" />
@@ -42,7 +48,7 @@
         <link rel="stylesheet" type="text/css" href="./public/skin/css/font.css">
         <link rel="stylesheet" type="text/css" href="./public/skin/css/aos.css">
         <link rel="stylesheet" type="text/css" href="./public/skin/css/jquerysctipttop.css">
-            <!--
+        <!--
             * https://tailwindcss.com/docs/guides/laravel
             * Tailwind CSS installation
             * npm install -D tailwindcss postcss autoprefixer
@@ -71,6 +77,10 @@
                             'hero-section-01-m': "url('./public/skin/images/bg_section_01_m.png')",
                             'hero-section-02': "url('./public/skin/images/bg_section_02.png')",
                         },
+                        zIndex: {
+                            60: '60',
+                            70: '70',
+                        }
                     }
                 }
             }
@@ -87,8 +97,8 @@
                         </a>
                     </div>
                     <div class="flex items-center">
-                        <a href="./SP-01-01.html" class="inline-flex items-center h-[35px] justify-center rounded-full py-3 px-4 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-blue-400 text-white hover:text-slate-100 hover:bg-blue-500 active:bg-blue-800 active:text-blue-100 focus-visible:outline-blue-600">
-                            <span class="inline-block text-base font-normal leading-none pt-1">무료 환급 조회하기</span>
+                        <a href="./SP-01-01.html" class="inline-flex items-center h-[35px] justify-center rounded-full py-3 px-4 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-blue-400 text-white hover:text-slate-100 hover:bg-blue-500 active:bg-blue-800 active:text-blue-100 focus-visible:outline-blue-600 transition-all">
+                            <span class="inline-block text-base font-medium leading-none py-1 tracking-tight">무료 환급 조회하기</span>
                         </a>
                     </div>
                 </nav>
@@ -112,7 +122,7 @@
                         </div>
                         <div class="pb-14">
                             <label for="phone" class="block mb-2 text-xl font-medium text-gray-900">휴대폰 번호</label>
-                            <input type="tel" name="phone" id="phone" autocomplete="off" class="h-14 pl-7 bg-[#F5F6F9]  text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 placeholder-[#9A9A9A]" placeholder=" - 없이 입력해주세요." minlength="10" maxlength="11" required>
+                            <input type="number" name="phone" id="phone" autocomplete="off" class="h-14 pl-7 bg-[#F5F6F9]  text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 placeholder-[#9A9A9A]" placeholder=" - 없이 입력해주세요." maxlength="11" oninput="maxLengthCheck(this)" required>
                         </div>
                         
                         <div>
@@ -142,7 +152,7 @@
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" class="block mx-auto w-3/4 lg:w-[337px] text-white bg-primary hover:shadow-base hover:shadow-[#217CF3] focus:ring-4 focus:outline-none focus:ring-blue-300 font-light rounded-full text-lg px-5 py-4 lg:py-2.5 text-center hover:transition-all">환급액 조회하기</button>
+                        <button type="submit" class="block mx-auto w-3/4 lg:w-[337px] text-white bg-primary hover:shadow-base hover:shadow-[#217CF3] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-lg px-5 py-4 lg:py-2.5 text-center hover:transition-all">환급액 조회하기</button>
                     </form>
                 </div>
             </div>
@@ -156,7 +166,7 @@
         </div>
 
         <!-- Main modal -->
-        <div id="modal-inquiry" class="modal hidden fixed top-0 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 max-h-full  justify-center items-center">
+        <div id="modal-inquiry" class="modal hidden fixed top-0 left-0 right-0 z-50 w-full h-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 max-h-full justify-center items-center">
             <div class="relative w-full max-w-sm max-h-full">
                 <!-- Modal content -->
                 <div class="relative bg-white shadow-modal rounded-[20px]">
@@ -181,7 +191,7 @@
                             </div>
                             <div>
                                 <label for="phone" class="block mb-1 text-md font-normal text-gray-900">연락처</label>
-                                <input type="number" name="phone" id="phone" autocomplete="off" maxlength="11" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 placeholder-[#C9C7C7]" placeholder=" - 없이 입력해주세요." required>
+                                <input type="number" name="phone" id="phone" autocomplete="off" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 placeholder-[#C9C7C7]" placeholder=" - 없이 입력해주세요." maxlength="11" oninput="maxLengthCheck(this)" required>
                             </div>
                             <div>
                                 <label for="message" class="block mb-1 text-md font-normal text-gray-900">문의내용</label>
@@ -189,19 +199,17 @@
                             </div>
                             <div class="pb-8">
                                 <div class="relative flex items-center mb-4">
-                                    <input id="terms-checkbox" type="checkbox" value="" class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-200 rounded-3xl focus:ring-blue-500 focus:ring-2" required>
-                                    <label for="terms-checkbox" class="ml-2 text-sm font-normal text-gray-500 cursor-pointer">(필수) 이용약관 동의</label>
-                                    <button type="button" class="open-modal absolute top-0 right-0" data-modal-id="modal-terms"><span class="text-sm text-gray-500 underline">보기</span></button>
+                                    <input id="modal-terms-checkbox" type="checkbox" value="" class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-200 rounded-3xl focus:ring-blue-500 focus:ring-2" required>
+                                    <label for="modal-terms-checkbox" class="ml-2 text-sm font-normal text-gray-500 hover:text-blue-800 cursor-pointer">(필수) 이용약관 동의</label>
+                                    <button type="button" class="open-modal absolute top-0 right-0" data-modal-id="modal-terms"><span class="text-sm text-gray-500 hover:text-primary underline">보기</span></button>
                                 </div>
                                 <div class="relative flex items-center mb-4">
-                                    <input id="privacyPolicy-checkbox" type="checkbox" value="" class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-200 rounded-3xl focus:ring-blue-500 focus:ring-2" required>
-                                    <label for="privacyPolicy-checkbox" class="ml-2 text-sm font-normal text-gray-500 cursor-pointer">(필수) 개인정보 수집 및 이용 동의</label>
-                                    <button type="button" class="open-modal absolute top-0 right-0" data-modal-id="modal-privacy"><span class="text-sm text-gray-500 underline">보기</span></button>
+                                    <input id="modal-privacyPolicy-checkbox" type="checkbox" value="" class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-200 rounded-3xl focus:ring-blue-500 focus:ring-2" required>
+                                    <label for="modal-privacyPolicy-checkbox" class="ml-2 text-sm font-normal text-gray-500 hover:text-blue-800 cursor-pointer">(필수) 개인정보 수집 및 이용 동의</label>
+                                    <button type="button" class="open-modal absolute top-0 right-0" data-modal-id="modal-privacy"><span class="text-sm text-gray-500 hover:text-primary underline">보기</span></button>
                                 </div>
                             </div>
-
-                            <button type="submit" class="close-modal w-full text-white bg-primary hover:shadow-base hover:shadow-[#217CF3] focus:ring-4 focus:outline-none focus:ring-blue-300 font-light rounded-full text-lg px-5 py-2.5 text-center hover:transition-all">등록</button>
-
+                            <button type="submit" class="w-full text-white bg-primary hover:shadow-base hover:shadow-[#217CF3] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-lg px-5 py-2.5 text-center hover:transition-all">등록</button>
                         </form>
                     </div>
                 </div>
@@ -209,7 +217,7 @@
         </div>
 
         <!-- Terms modal -->
-        <div id="modal-terms" class="modal hidden fixed top-0 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full justify-center items-center">
+        <div id="modal-terms" class="modal hidden fixed top-0 left-0 right-0 z-50 w-full h-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 max-h-full justify-center items-center">
             <div class="relative w-full max-w-lg lg:max-w-[910px] max-h-full">
                 <!-- Modal content -->
                 <div class="relative bg-white shadow-modal rounded-[20px]">
@@ -242,14 +250,14 @@
                     </div>
                     <!-- Modal footer -->
                     <div class="flex items-center p-6 rounded-b dark:border-gray-600">
-                        <button type="button" class="close-modal block w-1/4 mx-auto text-white bg-primary hover:shadow-base hover:shadow-[#217CF3] focus:ring-4 focus:outline-none focus:ring-blue-300 font-light rounded-full text-lg px-5 py-2.5 text-center hover:transition-all">확인</button>
+                        <button type="button" class="close-modal block w-1/4 mx-auto text-white bg-primary hover:shadow-base hover:shadow-[#217CF3] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-lg px-5 py-2.5 text-center hover:transition-all">확인</button>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- privacy modal -->
-        <div id="modal-privacy" class="modal hidden fixed top-0 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full justify-center items-center">
+        <div id="modal-privacy" class="modal hidden fixed top-0 left-0 right-0 z-50 w-full h-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 max-h-full justify-center items-center">
             <div class="relative w-full max-w-lg lg:max-w-[910px] max-h-full">
                 <!-- Modal content -->
                 <div class="relative bg-white shadow-modal rounded-[20px]">
@@ -282,14 +290,14 @@
                     </div>
                     <!-- Modal footer -->
                     <div class="flex items-center p-6 rounded-b dark:border-gray-600">
-                        <button type="button" class="close-modal block w-1/4 mx-auto text-white bg-primary hover:shadow-base hover:shadow-[#217CF3] focus:ring-4 focus:outline-none focus:ring-blue-300 font-light rounded-full text-lg px-5 py-2.5 text-center hover:transition-all">확인</button>
+                        <button type="button" class="close-modal block w-1/4 mx-auto text-white bg-primary hover:shadow-base hover:shadow-[#217CF3] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-lg px-5 py-2.5 text-center hover:transition-all">확인</button>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- maketing modal -->
-        <div id="modal-marketing" class="modal hidden fixed top-0 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full justify-center items-center">
+        <div id="modal-marketing" class="modal hidden fixed top-0 left-0 right-0 z-50 w-full h-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 max-h-full justify-center items-center">
             <div class="relative w-full max-w-lg lg:max-w-2xl max-h-full">
                 <!-- Modal content -->
                 <div class="relative bg-white shadow-modal rounded-[20px]">
@@ -316,7 +324,7 @@
                     </div>
                     <!-- Modal footer -->
                     <div class="flex items-center p-6 rounded-b dark:border-gray-600">
-                        <button type="button" class="close-modal block w-1/4 mx-auto text-white bg-primary hover:shadow-base hover:shadow-[#217CF3] focus:ring-4 focus:outline-none focus:ring-blue-300 font-light rounded-full text-lg px-5 py-2.5 text-center hover:transition-all">확인</button>
+                        <button type="button" class="close-modal block w-1/4 mx-auto text-white bg-primary hover:shadow-base hover:shadow-[#217CF3] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-lg px-5 py-2.5 text-center hover:transition-all">확인</button>
                     </div>
                 </div>
             </div>
@@ -333,7 +341,7 @@
                             </li>
                             <li>|</li>
                             <li>
-                                <button type="button" class="open-modal text-sm font-light hover:font-bold" data-modal-id="modal-privacy">개인정보 처리방침</button>
+                                <button type="button" class="open-modal text-sm font-medium hover:font-bold" data-modal-id="modal-privacy">개인정보 처리방침</button>
                             </li>
                         </ul>
                     </nav>
@@ -360,27 +368,37 @@
         <script>
             AOS.init();
             
-            //Accordion FAQ
-            $(".accordion_tab").click(function() {
-                if ($(this).hasClass("active")) {
-                    $(this).parent().removeClass("active");
-                    $(this).removeClass("active text-blue-500");
-                } else {
-                    $(this).parent().addClass("active");
-                    $(this).addClass("active text-blue-500");
+            //maxlength fixed
+            function maxLengthCheck(object) {
+                const maxLength = parseInt(object.getAttribute('maxlength'));
+                if (object.value.length > maxLength) {
+                    object.value = object.value.slice(0, maxLength);
                 }
-            });
-            
+            }
+
             $(document).ready(function() {
+                //Accordion FAQ
+                $(".accordion_tab").click(function() {
+                    if ($(this).hasClass("active")) {
+                        // 이미 열린 요소를 클릭하면 닫힘 상태로 변경
+                        $(this).parent().removeClass("active");
+                        $(this).removeClass("active text-blue-500");
+                    } else {
+                        // 현재 클릭 된 요소만 활성화
+                        $(this).parent().addClass("active");
+                        $(this).addClass("active text-blue-500");
+                    }
+                });
+
                 //Window bottom Scroll
                 $(window).on('scroll', function () {
                     let scrollHeight = $(document).height();
                     let scrollPosition = $(window).height() + $(window).scrollTop();
                     if($(window).width() > 1024){
                         if ((scrollHeight - scrollPosition) <= 1) {
-                            $('.btn_quick').addClass('xl:bottom-64').removeClass('xl:bottom-28');
+                            $('.btn_quick').addClass('xl:bottom-64').removeClass('xl:bottom-48');
                         } else {
-                            $('.btn_quick').addClass('xl:bottom-28').removeClass('xl:bottom-64');
+                            $('.btn_quick').addClass('xl:bottom-48').removeClass('xl:bottom-64');
                         }
                     } else {
                         if ((scrollHeight - scrollPosition) <= 1) {
@@ -433,12 +451,13 @@
                 $(".words").textroll({
                     easing: 'easeInOutCirc',
                     speed: 1000,
-                    delay: 600
+                    delay: 1400
                 });
                 $.syntax({
                     root: './public/js/'
                 });
             });
+            
         </script>
     </body>
 </html>
