@@ -23,10 +23,10 @@
     font-style: normal;
     font-weight: 400;
     src:
-        url(../font/eot/NotoSansKR-Ragular-Hestia.eot),
-        url(../font/eot/NotoSansKR-Ragular-Hestia.eot?#iefix) format("embedded-opentype"),
-        url(../font/woff/NotoSansKR-Ragular-Hestia.woff) format("woff"),
-        url(../font/otf/NotoSansKR-Ragular-Hestia.otf) format("opentype");
+        url(../font/eot/NotoSansKR-Regular-Hestia.eot),
+        url(../font/eot/NotoSansKR-Regular-Hestia.eot?#iefix) format("embedded-opentype"),
+        url(../font/woff/NotoSansKR-Regular-Hestia.woff) format("woff"),
+        url(../font/otf/NotoSansKR-Regular-Hestia.otf) format("opentype");
 }
 @font-face {
     font-family: "Noto Sans Korean";
