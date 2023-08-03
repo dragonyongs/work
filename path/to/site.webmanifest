@@ -1,6 +1,8 @@
 {
-    "name": "Refund Expert",
-    "short_name": "Refund Expert",
+    "name": "환급달인",
+    "short_name": "환급달인",
+    "start_url": "/",
+    "orientation": "portrait",
     "icons": [
         {
             "src": "./android-chrome-192x192.png?v=1",
@@ -13,7 +15,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#ffffff",
+    "theme_color": "#002473",
     "background_color": "#002473",
     "display": "standalone"
 }
